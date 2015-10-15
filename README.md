@@ -7,7 +7,7 @@ This is the code that is running the [Try Perl](http://tryperl.pl) website.
 
 ##Lessons
 
-[Try Perl](http://tryperl.pl) is a complete tutorial, not only a tiny introduction.
+[Try Perl](http://tryperl.pl) is a complete tutorial... within your browser !
 
 Look at the full list of lessons :
 * [Try perl](http://tryperl.pl/index.html?lesson=0)

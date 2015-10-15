@@ -133,7 +133,7 @@ sub success($$) {
 			print "Try again...\n\r\n\r";
 		}
 	} elsif($l == 4) {
-		if($c =~ m/^\s*cwsinabs\s+\-\d+\s*$/) { # sin 2
+		if($c =~ m/^\s*sin\s+\-\d+\s*$/) { # sin 2
 			print "SUCCESS !\n\r\n\r";
 		} elsif($c =~ m/^\s*sin\s+\d+.\d+\s*$/) { # sin 2.2
 			print "SUCCESS !\n\r\n\r";
