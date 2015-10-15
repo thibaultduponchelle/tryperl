@@ -1,0 +1,172 @@
+/* 
+Project : TryPerl 
+Author : Thibault Duponchelle 
+*/
+
+@font-face {
+	font-family: dk;
+	src: url(font/dk.otf);
+}
+
+@font-face {
+	font-family: mgh;
+	src: url(font/mgh.ttf);
+}
+
+@font-face {
+	font-family: h;
+	src: url(font/h.ttf);
+}
+
+@font-face {
+	font-family: fn;
+	src: url(font/fn.ttf);
+}
+
+h1 {
+	font-family: dk;
+	/*font-family: 'Indie Flower', cursive;*/
+	font-size: 220%;
+	line-height: 40px;
+}
+
+h2 {
+	font-family: mgh;
+	font-size: 190%;
+	margin-top: 40px;
+}
+
+body {
+	font-family: fn;
+	margin: 0px;
+	font-size: 110%;
+}
+
+@media screen and (orientation: landscape) {
+  body {
+   -webkit-text-size-adjust: 70%;
+  }
+}
+
+code { 
+	background-color: white;
+	padding: 2px;
+	font-size: 110%;
+	font-family: monospace;
+}
+
+strong { 
+	color: #686868;
+	padding: 2px;
+	font-size: 110%;
+}
+	
+html { 
+	height: 100%;
+}
+
+ul {
+	list-style-image: url('/pixs/onion-li.svg');
+}
+
+.onion {
+	float: left; 
+	margin: 25px;
+}
+
+#left-block { 
+	float: left;
+	width: 45%;
+	height: 100%;
+	border-radius: 10px 0px 0px 10px;
+	
+	background:
+		linear-gradient(135deg, #dedede 22px, #efefef 22px, #efefef 24px, transparent 24px, transparent 67px, #efefef 67px, #efefef 69px, transparent 69px),
+		linear-gradient(225deg, #dedede 22px, #efefef 22px, #efefef 24px, transparent 24px, transparent 67px, #efefef 67px, #efefef 69px, transparent 69px)0 64px;
+	background-color:#dedede;
+	background-size: 64px 128px;
+	
+	-moz-box-shadow:    inset 0 0 2px #000000;
+	-webkit-box-shadow: inset 0 0 2px #000000;
+	box-shadow:         inset 0 0 2px #000000;
+	overflow: hidden;
+
+}
+
+#left-block-content { 
+	padding: 30px;
+	opacity: 0;
+	line-height: 25px;
+}
+
+#left-block-content:first-letter {
+	color: red;
+	font-size: 130%; 
+}
+
+
+#middle-block {
+	float: left; 
+	overflow: auto;
+	background-image: url('pixs/sep.png');
+    	background-repeat: repeat-y;
+	height: 100%;
+	width: 30px;
+
+}
+
+#right-block { 
+	width: 100%;
+	height: 100%;
+	border-radius: 0px 10px 10px 0px;
+	background-color: white;
+}
+
+#right-block-content { 
+	padding: 30px;
+}
+
+#left-footer {
+	padding-top: 5px;
+	font-size: 100%;
+	/*background: gray;*/
+	width:100%;
+	height:25px;
+	position:absolute;
+	width: 45%;
+	bottom:0;
+	left:0;
+	text-align: center;
+	overflow: hidden;
+}
+
+#right-footer {
+	font-size: 100%;
+	width:100%;
+	height:25px;
+	position:absolute;
+	width: 55%;
+	bottom:0;
+	right:0;
+	text-align: right;
+	padding-right: 10px;
+	overflow: hidden;
+}
+
+
+div.console { font-size: 14px; margin-top:0px; }
+div.console div.jquery-console-inner
+{ height:100%; background:#efefef; padding:0;
+ overflow:auto }
+div.console div.jquery-console-prompt-box
+{ color:#444; font-family:h; }
+div.console div.jquery-console-focus span.jquery-console-cursor
+{ background:#333; color:#eee; font-weight:bold;  }
+div.console div.jquery-console-message-error
+{ color:#ef0505; font-family:sans-serif; font-weight:bold;
+ padding:0.1em; }
+div.console div.jquery-console-message-success
+{ color:#187718; font-family:h; padding:0.1em; }
+div.console span.jquery-console-prompt-label { font-weight:bold }
+div.console div.jquery-console-welcome { font-family: fn; margin-top: 5px; margin-bottom: 10px; color: gray; font-weight:bold; font-size: 120%; }
+

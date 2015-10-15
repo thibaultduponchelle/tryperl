@@ -1,0 +1,750 @@
+<!-- 
+Project : TryPerl
+Author : Thibault Duponchelle 
+-->
+
+<div id="lesson0">
+<h1>Try Perl !</h1>
+<h2>Initial</h2>
+
+Welcome to <strong>Try Perl</strong> !<br/><br/>
+
+The window on your right is an interactive Perl interpreter. <br/>
+You can type Perl statements and watch it run. <br/><br/>
+For your first try, type something like: <code>3 + 5</code><br/><br/>
+
+<u>LAZY PEOPLE</u> : The code tags like <code>"code tag"</code> are clikable, so you haven't to type every code snippets, risking a freaky typo... Just click on code tags to test it in the interpreter !
+
+<h2>Rules</h2>
+
+You could move to next lesson with a <code>next</code> and go back with <code>back</code><br/><br/>
+You could restart to this page with <code>restart</code><br/><br/>
+<u>When you're ready</u>, please type <code>next</code><br/>
+
+</div>
+
+<div id="lesson1">
+<h1>Reverse the onion</h1>
+
+<h2>Discover</h2>
+So you're new to Perl ? <br/><br/>
+Honestly I envy you, discovering Perl was a big revelation in my IT engineer life...<br/><br/>
+
+Perl is built upon some important <strong>principles</strong>, here are some :
+<ul>
+	<li>There's more than one way to do it. Best way is yours</li>
+	<li>When we program, we generally play with strings and... Perl is primarly designed to play with strings. That's so coool!</li>
+	<li>As far as possible, stay close to natural language (see Perl poetry)</li>
+	<li>Perl is a glue language, allowing to launch shell commands is as easy than accessing SYSV IPC or low level sockets functions.</li>
+</ul>
+
+<h2>Start to manipulate things (onions ?! or chunky bacon :P)</h2>
+
+Ok start right now without too much blah blah !<br/>
+Your first exercice is simply to type <code>reverse "onion"</code> to reverse the string "onion". Remember that with Perl <i>easy things are easy to do</i>.
+</div>
+
+<div id="lesson2">
+<h1>Uppercase</h1>
+
+<h2>Simple things stay easy with Perl</h2>
+Perl won't force you to manipulate ASCII values. Perl is convenient because it already provides builtins to handle it for you.<br/><br/>
+And it's easy, and builtins do what they sound like to do.<br/><br/>
+
+Please make me happy by typing <code>uc "onion"</code> or <code>lc "OnIoN"</code>...<br/><br/>
+
+...Or eventually another string if you really does not like onions,<br/>for instance <code>uc "banana"</code> is ok for me).<br/>
+</div>
+
+<div id="lesson3">
+<h1>Length</h1>
+<h2>String length</h2>
+
+You could retrieve the length of a string like this <code>length "banana"</code> (yes we now replaced onion per banana after eating onion for several lessons).<br/><br/>
+
+As always, we could apply length operator on number because perl will implicitely convert number to a string : <code>length 123</code><br/><br/>
+
+For completeness, please try something else before to continue <code>length 123.00</code><br/>
+(length requests a string so 123.00 is converted to 123 !)
+
+</div>
+
+<div id="lesson4">
+<h1>Basic Math</h1>
+<h2>Some maths</h2>
+
+Remember <i>easy things stay easy to do</i>.<br/><br/>
+
+Obviously basic maths functions are availble in Perl.<br/>
+So you will find builtins like <strong>abs</strong>, <strong>cos</strong>, etc... (<i>etc is not one of these !</i> :P)<br/><br/>
+
+Please type <code>cos 2</code><br/><br/>
+
+This is soooo easyyyyyy !
+</div>
+
+<div id="lesson5">
+<h1>Magic string </h1>
+<h2>The magic x</h2>
+
+Please welcome the <strong>magic x operator</strong> ! <br/><br/>
+
+This operator is great, to be convinced, type <code>"-" x 40</code><br/><br/>
+
+Take care that <strong>x</strong> (magic operator) is <i>not</i> <strong>*</strong> (multiply star).<br/>
+Try <code>42 x 10</code> vs <code>42 * 10</code> !<br/><br/>
+
+I can't resist to play more with this operator :)<br/><br/>
+
+Type <code>"/\\_" x 20</code><br/>
+</div>
+
+<div id="lesson6">
+<h1>One variable</h1>
+
+<h2>Hello sigil</h2>
+
+One thing that you have to know about Perl is that variables are prefixed by special a character.<br/>
+You should see it as a good thing, because it allows variable interpolation into strings and helps programmer to know with what kind of data he's dealing with...<br/><br/>
+The most common/simple variable is the <strong>scalar</strong> value and it's prefixed by a <strong>strikedtrhough S</strong>.<br/><br/>
+Perl users call it <strong>sigil</strong> but normal people call it <strong>dollar</strong> (who say truth?).<br/>
+Here is the famous symbol : <strong>$</strong><br/><br/>
+
+As we don't even talked about what could contain a scalar variable, let's declare an undefined variable !<br/><br/>
+
+Declare your first variable like this : <code>$u = undef</code>
+</div>
+
+<div id="lesson7">
+<h1>Weakly typed variables</h1>
+
+<h2>Numbers</h2>
+
+A scalar variable could contain a number whatever the precision it is.<br/>
+Note that I'm talking about <strong>number</strong> and not <i>integer</i> or <i>floating</i> or <i>whatever</i>.<br/><br/>
+Until you explicitely need precision (and in this case you need to explicitely set the precision or probably use a Math library...), Perl will simplify your task by taking care of these little things for you.
+
+<h2>Declare a number</h2>
+Declare a number like this : <code>$i = 42</code>
+</div>
+
+<div id="lesson8">
+<h1>itoa</h1>
+
+<h2>Implicit conversion to string</h2>
+
+Check the content of $i like this : <code>$i</code>.<br/><br/>
+
+Now use implicit conversion like this <code>print $i</code><br/> 
+(<strong>print</strong> force string context)<br/><br/>
+
+Or use <code>"$i"</code> in this case this is the <strong>quotes</strong> that are forcing string context.<br/><br/>
+
+Another method is to use concatenation so it force string context like this <code>$i . "min"</code> 
+
+</div>
+
+<div id="lesson9">
+<h1>Small strings</h1>
+
+<h2>Your first perl string variable</h2>
+
+A scalar variable could contain a string.<br/><br/>
+Honestly your variables will contain very often strings, because programmers deals a lot with <strong>strings</strong>.<br/><br/>
+
+To prepare next lesson, please put digits between quotes (here : 13), it will still be a string anyway as they are between quotes !<br/><br/>
+
+Declare a string like this : <code>$str = "  13 "</code>
+</div>
+
+<div id="lesson10">
+<h1>And atoi !</h1>
+
+<h2>Explicit conversion to number</h2>
+
+Check the content of <strong>$str</strong> like this : <code>$str</code><br/><br/>
+
+Now use explicit conversion like this <code>$str + 0.1</code> or <code>" 40 " + 2.0</code><br/>
+Note that it will work with a <strong>print</strong> like <code>print " 38" + 4</code><br/>
+In this case you explicitely reconvert to string after addition.<br/><br/>
+
+Note that it is the operator that force conversion, so <code>"41" + "1"</code> will produce a number with the result that we expect !
+
+<h2>Tips</h2>
+You could use this trick to convert to number by adding 0...<br/>
+Or you could use sprintf !<br/>
+</div>
+
+
+<div id="lesson11">
+<h1>Chomp chomp chomp</h1>
+
+<h2>This is so smart</h2>
+
+Everyday, every hours, every minutes... I'm <strong>chomping</strong> !<br/><br/>
+
+This command provides you an EASY and SAFE way to remove extra trailing characters (spaces, carriage returns...). It means that you can use with eyes closed ! 
+
+You must especially use it on data coming from : 
+<ul>
+<li>User input</li>
+<li>From curl/ssh/whatever stdout capture from shell command execution</li>
+<li>Or... coming from Mars since we discovered water on it... </li>
+</ul>
+
+<h2>Practical work</h2>
+It's time to play with chomp, but before that, we need a variable... Please start with a variable declaration with one extra space at the end like this <code>$tor = "onion "</code>.
+</div>
+
+<div id="lesson12">
+<h1>Ready, steady, Chomp !</h1>
+
+<h2>Check our dirty Tor</h2>
+
+Then we have to check what our <strong>$tor</strong> variable contains...<br/><br/>
+To do so, use <code>print "[$tor]"</code> or <code>"[$tor]"</code>
+
+<h2>Finally chomp ! </h2>
+
+Ok our variable is ready with an extra space at the end...<br/><br/>
+Now we need to remove a trailing character, let's execute <code>chomp $tor</code>.
+</div>
+
+<div id="lesson13">
+<h1>Chomp over there</h1>
+
+<h2>Conclusion about chomp</h2>
+
+We will close these samples around chomp by checking the final content of our <strong>$tor</strong> variable.<br/><br/>
+Please check that tariling space was removed with <code>print "($tor)"</code>.
+
+<h2>Chop</h2>
+There's a <i>bazooka</i> version of <strong>chomp</strong> that is called <strong>chop</strong>.<br/><br/>
+<strong>chop</strong> does not care about the character but chop in any case !<br/>
+For instance, if you start <code>chop $tor</code> it will crop the last <strong>"n"</strong> from "onion" in the variable <strong>$tor</strong> !<br/>
+(Note that it would have worked with a space)
+</div>
+
+<div id="lesson14">
+<h1>Arrays !</h1>
+
+<h2>About arrays</h2>
+
+Yet you know that Perl variables names have a special character as a prefix...
+Arrays are respecting the rules and the symbol is ??? <br/>I let you guess...<br/><br/>
+Please make an effort...<br/><br/>
+One clue, think that for <u>S</u>calar it was a <u>S</u>, so for <u>A</u>rray it should be ... A !<br/><br/>
+
+It's not exactly <strong>A</strong> actually but <strong>@</strong> but that's easy to remember !
+
+<h2>Declare a new array</h2>
+
+Start with an empty array <code>@empty = ()</code><br/><br/>
+
+Then I let you create a second (non empty) array called <strong>@arr</strong> like this <code>@arr = ("onion","c","b","a")</code><br/> 
+</div>
+
+<div id="lesson15">
+<h1>Still arrays</h1>
+
+<h2>Count items</h2>
+
+While we have this array initialized, we could try a <code>@arr</code> and you will probably be a bit surprised by the result.<br/><br/>
+If you want to inspect <strong>@arr content</strong> you have to say to perl that you want <code>print @arr</code> 
+Another method to count the items is to convert the array to a scalar value <code>scalar @arr</code><br/><br/>
+Finally I can't resist to show you one more method to know the length of the array...<br/> 
+Type <code>$#arr</code> to go to the next lesson ! <br/>
+</div>
+
+<div id="lesson16">
+<h1>Onion removal</h1>
+<h2>Shift</h2>
+Before anything else, first have a look at our array with <code>print @arr</code><br/><br/>
+
+I can't talk about arrays without immediately introduce <strong>shift</strong> keyword because you will simply see it almost everywhere in several Perl programs !<br/><br/>
+
+Actually, this keyword does 2 things : 
+<ul>
+<li>Return the first item of the array</li>
+<li>Remove the item from the array</li>
+</ul>
+
+Ok so let's start practical things. We prepared a <strong>@arr</strong> array with a dumb "onion" at the beginning...<br/><br/>
+I don't want to see "onion" mixed with "c" "b" "a" so we will simply remove it with this command <code>shift @arr</code>
+
+<h2>Unshift</h2>
+
+<strong>shift</strong> has it counterpart <strong>unshift</strong> that put an item in an array !<br/>
+</div>
+
+<div id="lesson17">
+<h1>Bubble pop</h1>
+<h2>Pop an item</h2>
+
+Perl obviously provides all necessary tools to push and pop items in an array !<br/>
+In this lesson we will discover <strong>pop</strong>.<br/><br/>
+
+First check what we now have inside our array with <code>print @arr</code><br/><br/>
+
+Alriiight, now we can pop the last item <code>pop @arr</code>
+
+</div>
+
+<div id="lesson18">
+<h1>Push a button</h1>
+<h2>Push one</h2>
+
+Now that we removed an item (check with <code>print @arr</code> if you want), we will just put it again in the array !<br/><br/>
+
+Before to do that, I would remind you that : 
+<ul>
+<li><strong>push</strong> put data <i>at the end</i> of the array !</li>
+<li>Array garanties that insertion order is kept.</li>
+</ul>
+<br/>
+Now you can type <code>push @arr, "a"</code>
+
+</div>
+
+<div id="lesson19">
+<h1>Push Push !</h1>
+<h2>Push several</h2>
+If you want, quicly check array content with <code>print @arr</code> to see that it well contains "c" "b" "a" !<br/><br/>
+There's even more to say about push...<br/><br/>
+You're not limited to <strong>scalar</strong> values, you can push an array into another array !<br/><br/>
+
+As a first excercice, please type <code>push @arr, ()</code><br/>
+... But this is not really useful as it just adds nothing to our array :D<br/><br/>
+
+The good example is this one <code>push @arr, ( "x", "y", "z" )</code><br/><br/>
+</div>
+
+<div id="lesson20">
+<h1>For foreach</h1>
+
+<h2>Foreach</h2>
+What do we do with arrays ? We <u>iterate</u> over items !<br/><br/>
+Let's time to introduce the foreach construction ! <br/><br/>
+Perl foreach is extremly flexible and easy to use... <br/><br/>
+
+Try this command : <code>foreach $v (@arr) { print $v }</code>
+
+<h2>Foreach with for</h2>
+
+The keyword <strong>foreach</strong> could be replaced by <strong>for</strong> without any problem.<br/>
+<code>for $v (@arr) { print $v }</code><br/><br/>
+
+We could also sort/reverse/whatever before iteration like this : 
+<ul>
+<li>Reverse :<code>for $v (reverse @arr) { print $v }</code><br/></li>
+<li>Sort : <code>for $v (sort @arr) { print $v }</code></li>
+</ul>
+</div>
+
+<div id="lesson21">
+<h1>Splice and range</h1>
+
+<h2>Range operator</h2>
+We will play with <i>array portions</i> but first check the content of our extended array with <code>print @arr</code><br/><br/>
+
+Then use range to get only 3 first items <code>print @arr[0..2]</code>
+
+<h2>Pizza s(p)lice</h2>
+
+Then we could start cutting the cake/onion/rope/whatever ! <br/><br/>
+Go with this command <code>@arr = splice @arr, 0, 3</code><br/><br/>
+(Note that <strong>3</strong> is the length where the <strong>2</strong> above in range was the index !) 
+
+</div>
+
+<div id="lesson22">
+<h1>Getting items</h1>
+<h2>Accessing item</h2>
+
+To access an item in the array, you could do a <code>$arr[1]</code>.<br/><br/>
+
+Oh my God, why the prefixed symbol moved from <strong>@</strong> to <strong>$</strong> ?? <br/><br/>
+Don't panic, keep calm and take a beer...<br/>
+The symbol used depend from <u>what you want to access</u>, here we want a scalar value, so we use <strong>$</strong> !
+
+<h2>Accessing multiple values</h2>
+To get multiple values at once, there's a magic assignment in Perl, that produce jealousy from all other programming languages : <strong>Parallel multi assignment</strong> !<br/><br/>
+
+Please try <code>($a, $b, $c) = @arr</code><br/><br/>
+The left value of the assignment requests 3 variables, so Perl get 3 first items from <strong>@arr</strong>. And it handles correctly if there are few items and ignore extra items !Thank you Perl !
+</div>
+
+<div id="lesson23">
+<h1>Playing with items</h1>
+<h2>Checking our extracted items</h2>
+
+Now check that <strong>$a</strong>, <strong>$b</strong> and <strong>$c</strong> contains the right data : <br/>
+<ul>
+<li>Type <code>$a</code></li>
+<li>Type <code>$b</code></li>
+<li>Type <code>$c</code></li>
+</ul>
+
+The good news is <strong>$b</strong> produce "b" but we have some trouble with <strong>$a</strong> and <strong>$c</strong>... We need to switch them !
+
+<h2>Exchange values</h2> 
+I ask you to keep your eyes wide open because it's really beautiful !<br/><br/>
+
+Type <code>($c, $a) = ($a, $c)</code> or <code>($a, $c) = ($c, $a)</code> 
+</div>
+
+<div id="lesson24">
+<h1>No more mess</h1>
+<h2>Print exchanged values</h2>
+
+Now we can print our data with switched values : 
+<ul>
+<li>With a classic <code>print "$a$b$c"</code></li>
+<li>Or using commas like this <code>print $a, $b, $c</code></li>
+<li>Or with formatted printf like <code>printf("%s%s%s", $a, $b, $c)</code></li>
+</ul>
+
+Note that printf will be more useful for formatting.<br/><br/>
+
+That's all for this lesson ! <br/>
+</div>
+
+<div id="lesson25">
+<h1>Sorting</h1>
+<h2>Check dirty array</h2>
+While we played with <strong>$a</strong>, <strong>$b</strong> and <strong>$c</strong>, we forget about our initial <strong>@arr</strong>...<br/>
+Let's check our <strong>@arr</strong> with <code>print @arr</code> to see that items are still in dumb order "c", "b", "a" !
+
+<h2>Sort items</h2>
+Then we could sort the array with <code>print( sort @arr )</code><br/><br/>
+
+Soooo easyyyy right ?!
+</div>
+
+<div id="lesson26">
+<h1>Endless</h1>
+<h2>Last item</h2>
+
+If we want the last item, whatever the index, we have several manner to do so :
+<ul>
+<li>We could do a <code>$arr[$#arr]</code></li>
+<li>Or we could do a <code>$arr[-1]</code></li>
+<li>Or even we could do a <code>$arr[@arr-1]</code></li>
+</ul>
+
+Yeah baby, there's more than one way to do it, remember !<br/><br/>
+
+</div>
+
+<div id="lesson27">
+<h1>String concatenation</h1>
+<h2>Join</h2>
+
+We still have our <strong>@arr</strong> filled with dummy "c", "b", "a"...<br/><br/>
+But now I want to print array items separated by commas. But I don't want to handle parity (no commas at the end without item).<br/><br/>
+
+Simply type <code>join(",",@arr)</code> or <code>join ",",@arr</code><br/><br/>
+As I'm a joker, I propose that you could do something even weird like <code>join(" <--> ",@arr)</code> or <code>join " <--> ",@arr</code><br/><br/>
+Perl is also known as <strong>practical extraction and report language</strong>, formatting data is extremly easy !<br/><br/>
+
+Sky only is the limit !<br/>
+
+</div>
+
+<div id="lesson28">
+<h1>Banana split</h1>
+<h2>From raw to structured data</h2>
+
+Manipulating string with Perl is extremly easy, I repeat !<br/><br/>
+
+Let's discover the split keyword : <br/><br/>
+<strong>split</strong> let you feed structured data from raw strings without too much effort !<br/>
+The most typical example is <code>join("-", split(",", "john,doe,30"))</code><br/>
+(Please note that we put a <strong>join</strong> to pretty print the result in this terminal)<br/><br/>
+You can use whatever separator even multi characters separator : <br/><code>join("-", split("::", "john::doe::30"))</code><br/><br/>
+Handling empty fields without any effort : <br/><code>join("-", split(",", "john,,doe,30,,,"))</code><br/><br/>
+Then finally please retrieve split data in separate variables like this : <br/><code>($f, $l, $a) = split(",", "john,doe,30")</code>
+</div>
+
+<div id="lesson29">
+<h1>Split result</h1>
+<h2>Checking your split</h2>
+
+Let's check the result of our split with <code>print "$f $l $a"</code><br/><br/>
+
+This is soooo easyyyyyy !
+</div>
+
+<div id="lesson30">
+<h1>Conditions</h1>
+<h2>if-then-else !</h2>
+We are not going to do too much things if we are not able to execute code upon conditions...<br/><br/>
+
+No surprise, Perl provides the famous <strong>if then else</strong> :<br/>
+<code>if (1) { print "onion" }</code><br/><br/>
+
+Some things to remember : 
+<ul>
+<li>You have to put <u>braces</u> (<strong>if(1) print "stuff"</strong> is simply invalid)</li>
+<li>The keyword to combine else <i>and</i> if is <strong>elsif</strong></u></li>
+</ul>
+</div>
+
+<div id="lesson31">
+<h1>Do if unless</h1>
+
+<h2>Just do it !</h2>
+Perl true and false is intuitive...<br/>
+Consider only what is <strong>false</strong> and deduce that everything else is <strong>true</strong><br/><br/>
+Note that <strong>not</strong> or <strong>!</strong> (exclamation mark) are returning the logical negation.<br/>
+To test true and false values, please welcome <strong>do if</strong> construction !<br/><br/>
+
+First type <code>do { print "onion" } if 1</code><br/><br/>
+
+The exact contrary is unless: <code>do { print "onion" } unless 0</code><br/><br/>
+
+Same construction apply <i>without</i> the <strong>do</strong>, for instance you could try <strong>not</strong> with <code>print "onion" if not 0</code><br/>
+</div>
+
+<div id="lesson32">
+<h1>True lies</h1>
+<h2>Who to trust ?</h2>
+
+So now what is <strong>false</strong> : 
+<ul>
+<li>0 is false</li>
+<li>"0" is false</li>
+<li>0.0 is false</li>
+<li>undef is false</li>
+<li>Empty array () is false</li> 
+</ul>
+
+To summarize you can type (and note somewhere maybe) something like : <br/>
+<code>!(0 or "0" or 0.0 or undef or ()) and print "false"</code><br/><br/>
+
+So what is <strong>true</strong> ? 
+<ul>
+<li>" " is true</li>
+<li>"0.0" is true</li>
+<li>1 is true</li>
+<li>"banana" is true</li>
+</ul>
+
+To summarize you can type something like : <br/>
+<code>" " and "0.0" and 1 and "banana" and print "true"</code><br/><br/>
+</div>
+
+<div id="lesson33">
+<h1>It's logic !</h1>
+<h2>Logical expressions</h2>
+In Perl, we like to do <i>one liner logical execution</i>.<br/>
+If you don't understand what I'm talking about it's like when you do with bash <strong>./configure && make && sudo make install</strong>.<br/>
+It means that you will execute <strong>make</strong> <i>depending</i> the result of <strong>./configure</strong> script.<br/><br/>
+
+With perl we use and abuse of these logical expressions and we even have more operators for it than any other language ! <br/><br/>
+
+Please make me happy and test some of these statements : 
+<ul>
+<li><code>1 and print "onion"</code></li>
+<li><code>1 && print "onion"</code></li>
+<li><code>0 or print "onion"</code></li>
+<li><code>0 || print "onion"</code></li>
+</ul>
+
+Cool right ?<br/><br/>
+<li><code>0 and print "banana" or print "onion"</code></li>
+</div>
+
+<div id="lesson34">
+<h1>Ternary operator</h1>
+<h2>Short if-then-else !</h2>
+Let's introduce ternary operator !<br/><br/>
+Maybe you know it from another language (C for instance)...<br/><br/>
+So I let you try these examples :<br/>
+<ul>
+<li>Execute <i>then</i> : <code>0 ? print "true" : print "false"</code></li>
+<li>Execute <i>else</i> : <code>1 ? print "true" : print "false"</code></li>
+</ul>
+</div>
+
+<div id="lesson35">
+<h1>Hash</h1>
+<h2>Powerful tr(h)ash</h2>
+
+There's a variable type that we do not mentionned yet... The famous <strong>hash</strong> !<br/><br/>
+As other Perl variables, an <strong>hash</strong> is prefixed by a special symbol...<br/>I could let you guess what is the prefix but this time, it's not something really close to a <strong>H</strong>... as it's <strong>%</strong> ! <br/><br/>
+So first define an empty hash <code>%empty = ()</code><br/><br/>
+
+Then we will do something more useul <code>%h = ( key1 => "val1", key2 => "val2" )</code><br/>
+</div>
+
+<div id="lesson36">
+<h1>Still hashes</h1>
+<h2>Looking inside hash</h2>
+
+To retrieve the value that you stored in the box named <strong>"key2"</strong> in your hash <strong>%h</strong>... 
+You should use one of these methods : 
+<ul>
+<li>Classic : <code>$h{"key2"}</code><br/></li>
+<li>Ventilated with spaces : <code>$h { "key2" }</code><br/></li>
+<li>Simple quote : <code>$h{'key2'}</code><br/></li>
+<li>Even without quotes : <code>$h{key2}</code><br/></li>
+</ul>
+
+Note that we use a <strong>$</strong> as we want to access a scalar value !<br/>
+
+We could also print the whole hash with <code>print %h</code><br/><br/>
+This is really basic and ugly way to print the hash, no need to say that there are a lot of other ways to pretty print an hash ! <br/>
+Next lesson will describe some other methods, but the goal is not to pretty print the hash but to discover how to play with hashes :)<br/>
+</div>
+
+<div id="lesson37">
+<h1>Hashes of onions</h1>
+<h2>Keys and values</h2>
+
+Note that <strong>join</strong> also works on <strong>hashes</strong> so <code>print join "-",%h</code> will produce what we want.<br/><br/>
+
+What if we only want keys ?<br/>
+To do so, use a <code>print keys %h</code><br/><br/>
+
+Same for values ?<br/>
+<code>print values %h</code> !<br/><br/>
+
+<u>NOTA BENE</u> : an hash does not preserve any (insertion) order but put data in a special way (internally) to access it quickly. It means that you often have to do your own sorting !<br/>
+</div>
+
+<div id="lesson38">
+<h1>Variable types</h1>
+<h2>Scalar , arrays and hash !</h2>
+
+Now that we have introduced variables, we will dig a bit more into it. <br/>
+First we could inspect a variable type : 
+<ul>
+<li><code>\$s</code></li>
+<li><code>\@a</code></li>
+<li><code>\%h</code></li>
+<li><code>\&c</code></li>
+</ul>
+
+Note that we forget about the fourth type which is the function type, but please ignore it at the moment.<br/><br/>
+What we have is a <i>first level reference</i> it means that we get the key of the variable in the Perl internals, and we know that this key is pointing to a scalar, array or hash.<br/><br/>
+Then try something like <code>\\$s</code> and see what we got for a <i>second level reference</i><br/>
+</div>
+
+<div id="lesson39">
+<h1>Refs</h1>
+<h2>Referencing</h2>
+I will introduce references, but honestly I will do it quickly as references are not intented for beginners.<br/><br/>
+For lucky C programmers, references are like pointers in C but with a key difference that it's not real memory location but some place relative to perl variable table.<br/>
+It means that instead of playing with scalar, array or hash you will have a kind of key that is <i>referencing</i> to your data.<br/><br/>
+The operator to reference a variable is <strong>\</strong> (backslash).<br/><br/>
+
+There's no limitation in the number of reference levels for a variable...<br/><br/>
+...But the good sense should prevent you to do some dummy <code>\\\\\\%h</code>
+</div>
+
+<div id="lesson40">
+<h1>Derefs</h1>
+<h2>Dereferencing</h2>
+
+To dereference, you have to <strong>cast</strong> (sort of) to the type that you want.<br/>
+For our tests we will reuse our <strong>@arr</strong> and <strong>%h</strong><br/><br/>
+Take <i>reference</i> of our array then <i>dereference</i> to an array and <i>print</i> it : <br/><code>print @{ \@arr }</code><br/><br/>
+Take <i>reference</i> of our hash then <i>dereference</i> to an hash and <i>print</i> it : <br/><code>print %{ \%h }</code><br/><br/>
+
+Note that we use the prefix symbol of the variable type (<strong>@</strong> and <strong>%</strong>).<br/><br/>
+And while we are discussing about dereferencing types, trying to dereference an array as a hash and vice versa will just produce an error !<br/>
+</div>
+
+<div id="lesson41">
+<h1>Subs</h1>
+<h2>Functions</h2>
+In Perl, functions are called <strong>sub</strong> as <i>sub procedure</i> !<br/><br/>
+
+Perl sub declaration are extremly flexible :<br/><br/>
+No need to explicitely give return type : <code>sub f1() { print "f1" } f1()</code><br/><br/>
+No need to exploicitely give parameters : <code>sub f2 { print "f2" } f2("a")</code><br/><br/>
+If parameters are given, possible optional parameters after a semi colon : <code>sub f3($;$$) { print "f3" } f3("a","b")</code><br/><br/>
+So Perl functions declaration are exremly flexible !<br/>
+
+<h2>Function type</h2>
+
+I won't discuss too much about it but a <strong>sub</strong> is also a variable type and could be threated as is and dereferenced for instance ...<br/> 
+Please try <code>\&s</code> and finally <code>& { sub { print "f4" }}()</code> 
+</div>
+
+<div id="lesson42">
+<h1>Grep</h1>
+<h2>Introduction to regex</h2>
+
+Perl is well known to be the best language to use with regular expression.<br/>
+Perl even produced standard <strong>PCRE</strong> which stands for <u>Perl Compatible Regular Expression</u> !<br/><br/>
+First we will start with a grep : <br/><br/>
+Please type <code>grep {/onion/} "onion and bacon" and print "get it"</code><br/><br/>
+
+There's also another way to test a string, please try :<br/><code>if ("onion" =~ /nio/) { print "match"}</code>
+</div>
+
+<div id="lesson43">
+<h1>World map</h1>
+<h2>Introduction to map</h2>
+
+Perl provides a command to apply an action to a list of data. It's called <strong>map</strong> !<br/><br/>
+
+Please give it a try with <code>print map {ucfirst $_} ("aa", "bb", "cc")</code><br/><br/>
+
+Oh, wait, I need to explain what is <strong>$_</strong> ?!<br/><br/>
+It's only the current item !<br/>
+</div>
+
+<div id="lesson44">
+<h1>Perl culture</h1>
+<h2>Yet Another Perl Hacker</h2>
+
+If you goes here, that's because you're interested and ready to learn more about Perl...
+So before concluding I need to talk about Perl culture...<br/><br/>
+
+Perl community is <u>huge</u> and <u>valuable</u> :
+<ul>
+<li>Perl has a fantastic <a href="http://www.cpan.org/">code database (CPAN)</a>.</li>
+<li>Perl has an amazing <a href="http://www.perlmonks.org/">questions and answers website (PerlMonks)</a>...</li>
+</ul>
+
+Perl programmers are funny (look at <i>Acme</i> modules in <a href="http://www.cpan.org/">CPAN</a>).<br/>
+Perl programmers often play with obfuscated code.<br/><br/>
+
+To conclude please type (or click lazy people) on this snippet :<br/><br/>
+<code>$_ = "Jvtu bopuifs Pfsm ibdlfs"; y/a-z/za-y/; print</code>
+
+<h2>Extra bonus tips</h2>
+Think about using <strong>use strict</strong> and <strong>use warnings</strong> !!!
+
+</div>
+
+<div id="lesson45">
+<h1>Onion award</h1>
+<h2>To go further</h2>
+
+You successfully finished the tutorial about Perl.<br/><br/>
+I hope you enjoyed the tutorial and learned a lot of stuff. I really made it with love !<br/><br/>
+I recommend that you start right now to test things on your computer...<br/>
+...Or visit websites to learn more about Perl.<br/><br/>
+
+What could I recommend as further readings ? 
+<ul>
+<li><u>Programming Perl</u> also called <i>The Camel Book</i></li>
+<li><u>Modern Perl Programming</u></li>
+</ul>
+
+<h2>Get your medal</h2>
+
+As an award, please get this onion picture as a gift !<br/><br/>
+
+<center><img src="pixs/onion-big.svg"/></center>
+</div>
+
+
+
+
+
+
