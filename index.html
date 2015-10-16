@@ -108,7 +108,7 @@
 	       /* Check if we need to go to next lesson */
 	       arrayOfLines = result.match(/[^\r\n]+/g);
 	       if(arrayOfLines.length > 1) {
-	         if(arrayOfLines[1] == "SUCCESS !") {
+	         if(arrayOfLines[arrayOfLines.length - 1] == "SUCCESS !") {
 		   if(numlesson < maxlesson) {
 	             numlesson += 1;
 	             window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/index.html?lesson=" + numlesson);
@@ -159,7 +159,7 @@ Author : Thibault Duponchelle
 <div id="right-block">
 </div>
 
-<div id="left-footer">Thibault Duponchelle - <a href="http://www.tryruby.org">tryruby</a> - <a href="https://github.com/chrisdone/jquery-console">console</a></div>
+<div id="left-footer"><a href="https://github.com/thibaultduponchelle/tryperl">Thibault Duponchelle</a> - <a href="https://github.com/chrisdone/jquery-console">console</a> - <a href="http://www.tryruby.org">tryruby</a></div>
 <div id="right-footer"><code>clear</code> clear editor - <code>back</code> previous lesson - <code>next</code> next lesson</div>
 
 
