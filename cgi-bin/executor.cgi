@@ -116,8 +116,7 @@ sub success($$) {
 	} elsif($l == 2) { 
 		if($c =~ m/^\s*lc\s+"\w+"\s*$/) { # lc "onion"
 			print "SUCCESS !\n\r\n\r";
-		}
-		if($c =~ m/^\s*uc\s+"\w+"\s*$/) { # uc "onion"
+		} elsif($c =~ m/^\s*uc\s+"\w+"\s*$/) { # uc "onion"
 			print "SUCCESS !\n\r\n\r";
 		} else {
 			print "Try again...\n\r\n\r";
@@ -147,11 +146,11 @@ sub success($$) {
 	} elsif($l == 5) {
 		if($c =~ m/^\s*"-"\s*x\s*\d+\s*$/) { # "-" x 10
 			print "Good ! It's sooo cooool right ?!\n\r\n\r";
-		}elsif($c =~ m/^\s*\d+\s*x\s*\d+\s*$/) { # 42 x 10
+		} elsif($c =~ m/^\s*\d+\s*x\s*\d+\s*$/) { # 42 x 10
 			print "Converted to string then concatenated !\n\r\n\r";
-		}elsif($c =~ m/^\s*\d+\s*\*\s*\d+\s*$/) { # 42 * 10
+		} elsif($c =~ m/^\s*\d+\s*\*\s*\d+\s*$/) { # 42 * 10
 			print "Multiplication !\n\r\n\r";
-		}elsif($c =~ m/^\s*"\/\\\\_"\s*x\s*\d+\s*$/) { # "/\_" x 10
+		} elsif($c =~ m/^\s*"\/\\\\_"\s*x\s*\d+\s*$/) { # "/\_" x 10
 			print "SUCCESS !\n\r\n\r";
 		} else {
 			print "Try again...\n\r\n\r";
@@ -263,7 +262,7 @@ sub success($$) {
 	} elsif($l == 15) {
 		if($c =~ m/^\s*\@arr\s*$/) { # @arr
 			print "The value returned is the number of items in the array !\n\r\n\r";
-		}elsif($c =~ m/^\s*print\s+\@arr\s*$/) { # print @arr
+		} elsif($c =~ m/^\s*print\s+\@arr\s*$/) { # print @arr
 			print "Yeah ! Here we say to Perl to print array as string !\n\r\n\r";
 		} elsif($c =~ m/^\s*scalar\s+\@arr\s*$/) { # scalar @arr
 			print "The value returned is the number of items in the array !\n\r\n\r";
@@ -590,11 +589,7 @@ sub success($$) {
 		} else {
 			print "Try again...\n\r\n\r";
 		}
-
-	
 	}
-
-	 
 }
 
 $| = 1; # Force flush
