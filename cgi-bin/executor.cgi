@@ -619,6 +619,7 @@ eval {
 	alarm 3; # 3 sec
 	$ret = $compartment->reval($cmd); # This reval is for code execution
 	alarm 0;
+	die $@ if $@;
 };
 
 # Exception 
@@ -628,8 +629,8 @@ select $oldFH;
 close $outputFH;
 
 if($e) {
-	print "exception\n\r";
-	print "=> $@\n\r";	
+	chomp $e;
+	print "=> Exception : $e\n\r";	
 } elsif($output) {
 	print "=> $output\n\r";
 } else{ 
