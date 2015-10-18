@@ -2,6 +2,15 @@
 Project : TryPerl
 Author : Thibault Duponchelle 
 -->
+<html>
+<head>
+<title>Try Perl: learn the basics of the Perl language in your browser</title>
+	<meta name="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" href="pixs/faviconion.ico" type="image/x-icon">
+	<link rel="icon" href="pixs/faviconion.ico" type="image/x-icon">
+</head>
+
+<body>
 
 <div id="lesson0">
 <h1>Try Perl !</h1>
@@ -20,7 +29,6 @@ For your first try, type something like: <code>3 + 5</code><br/><br/>
 You could move to next lesson with a <code>next</code> and go back with <code>back</code><br/><br/>
 You could restart to this page with <code>restart</code><br/><br/>
 <u>When you're ready</u>, please type <code>next</code><br/>
-
 </div>
 
 <div id="lesson1">
@@ -66,7 +74,6 @@ As always, we could apply length operator on number because perl will implicitel
 
 For completeness, please try something else before to continue <code>length 123.00</code><br/>
 (length requests a string so 123.00 is converted to 123 !)
-
 </div>
 
 <div id="lesson4">
@@ -141,7 +148,6 @@ Now use implicit conversion like this <code>print $i</code><br/>
 Or use <code>"$i"</code> in this case this is the <strong>quotes</strong> that are forcing string context.<br/><br/>
 
 Another method is to use concatenation so it force string context like this <code>$i . "min"</code> 
-
 </div>
 
 <div id="lesson9">
@@ -287,7 +293,6 @@ In this lesson we will discover <strong>pop</strong>.<br/><br/>
 First check what we now have inside our array with <code>print @arr</code><br/><br/>
 
 Alriiight, now we can pop the last item <code>pop @arr</code>
-
 </div>
 
 <div id="lesson18">
@@ -303,7 +308,6 @@ Before to do that, I would remind you that :
 </ul>
 <br/>
 Now you can type <code>push @arr, "a"</code>
-
 </div>
 
 <div id="lesson19">
@@ -354,7 +358,6 @@ Then use range to get only 3 first items <code>print @arr[0..2]</code>
 Then we could start cutting the cake/onion/rope/whatever ! <br/><br/>
 Go with this command <code>@arr = splice @arr, 0, 3</code><br/><br/>
 (Note that <strong>3</strong> is the length where the <strong>2</strong> above in range was the index !) 
-
 </div>
 
 <div id="lesson22">
@@ -433,7 +436,6 @@ If we want the last item, whatever the index, we have several manner to do so :
 </ul>
 
 Yeah baby, there's more than one way to do it, remember !<br/><br/>
-
 </div>
 
 <div id="lesson27">
@@ -448,7 +450,6 @@ As I'm a joker, I propose that you could do something even weird like <code>join
 Perl is also known as <strong>practical extraction and report language</strong>, formatting data is extremly easy !<br/><br/>
 
 Sky only is the limit !<br/>
-
 </div>
 
 <div id="lesson28">
@@ -575,7 +576,7 @@ There's a variable type that we do not mentionned yet... The famous <strong>hash
 As other Perl variables, an <strong>hash</strong> is prefixed by a special symbol...<br/>I could let you guess what is the prefix but this time, it's not something really close to a <strong>H</strong>... as it's <strong>%</strong> ! <br/><br/>
 So first define an empty hash <code>%empty = ()</code><br/><br/>
 
-Then we will do something more useul <code>%h = ( key1 => "val1", key2 => "val2" )</code><br/>
+Then we will do something more useul <code>%h = ( key1 => "val1", key2 => "val2" )</code>
 </div>
 
 <div id="lesson36">
@@ -652,7 +653,7 @@ Take <i>reference</i> of our array then <i>dereference</i> to an array and <i>pr
 Take <i>reference</i> of our hash then <i>dereference</i> to an hash and <i>print</i> it : <br/><code>print %{ \%h }</code><br/><br/>
 
 Note that we use the prefix symbol of the variable type (<strong>@</strong> and <strong>%</strong>).<br/><br/>
-And while we are discussing about dereferencing types, trying to dereference an array as a hash and vice versa will just produce an error !<br/>
+And while we are discussing about dereferencing types, trying to dereference an array as a hash and vice versa will just produce an error !
 </div>
 
 <div id="lesson41">
@@ -669,7 +670,7 @@ So Perl functions declaration are exremly flexible !<br/>
 <h2>Function type</h2>
 
 I won't discuss too much about it but a <strong>sub</strong> is also a variable type and could be threated as is and dereferenced for instance ...<br/> 
-Please try <code>\&s</code> and finally <code>& { sub { print "f4" }}()</code> 
+Please try <code>\&s</code> and finally <code>&{ sub { print "f4" }}()</code> 
 </div>
 
 <div id="lesson42">
@@ -717,7 +718,6 @@ To conclude please type (or click lazy people) on this snippet :<br/><br/>
 
 <h2>Extra bonus tips</h2>
 Think about using <strong>use strict</strong> and <strong>use warnings</strong> !!!
-
 </div>
 
 <div id="lesson45">
@@ -743,7 +743,8 @@ As an award, please get this onion picture as a gift !<br/><br/>
 <center><img src="pixs/onion-big.svg"/></center>
 </div>
 
-
+</body>
+</html>
 
 
 
