@@ -25,7 +25,6 @@ Author : Thibault Duponchelle
 
 h1 {
 	font-family: dk;
-	/*font-family: 'Indie Flower', cursive;*/
 	font-size: 220%;
 	line-height: 40px;
 }
@@ -43,9 +42,9 @@ body {
 }
 
 @media screen and (orientation: landscape) {
-  body {
-   -webkit-text-size-adjust: 70%;
-  }
+	body {
+		-webkit-text-size-adjust: 70%;
+  	}
 }
 
 code { 
@@ -79,18 +78,15 @@ ul {
 	width: 45%;
 	height: 100%;
 	border-radius: 10px 0px 0px 10px;
-	
 	background:
 		linear-gradient(135deg, #dedede 22px, #efefef 22px, #efefef 24px, transparent 24px, transparent 67px, #efefef 67px, #efefef 69px, transparent 69px),
 		linear-gradient(225deg, #dedede 22px, #efefef 22px, #efefef 24px, transparent 24px, transparent 67px, #efefef 67px, #efefef 69px, transparent 69px)0 64px;
 	background-color:#dedede;
 	background-size: 64px 128px;
-	
 	-moz-box-shadow:    inset 0 0 2px #000000;
 	-webkit-box-shadow: inset 0 0 2px #000000;
 	box-shadow:         inset 0 0 2px #000000;
 	overflow: hidden;
-
 }
 
 #left-block-content { 
@@ -112,7 +108,6 @@ ul {
     	background-repeat: repeat-y;
 	height: 100%;
 	width: 30px;
-
 }
 
 #right-block { 
@@ -154,19 +149,53 @@ ul {
 }
 
 
-div.console { font-size: 14px; margin-top:0px; }
-div.console div.jquery-console-inner
-{ height:100%; background:#efefef; padding:0;
- overflow:auto }
-div.console div.jquery-console-prompt-box
-{ color:#444; font-family:h; }
-div.console div.jquery-console-focus span.jquery-console-cursor
-{ background:#333; color:#eee; font-weight:bold;  }
-div.console div.jquery-console-message-error
-{ color:#ef0505; font-family:sans-serif; font-weight:bold;
- padding:0.1em; }
-div.console div.jquery-console-message-success
-{ color:#187718; font-family:h; padding:0.1em; }
-div.console span.jquery-console-prompt-label { font-weight:bold }
-div.console div.jquery-console-welcome { font-family: fn; margin-top: 5px; margin-bottom: 10px; color: gray; font-weight:bold; font-size: 120%; }
+/* Console */
+div.console { 
+	font-size: 14px; 
+	margin-top:0px; 
+}
+
+div.console div.jquery-console-inner { 
+	height:100%; 
+	background:#efefef; 
+	padding:0;
+	overflow:auto 
+}
+
+div.console div.jquery-console-prompt-box { 
+	font-family:h; 
+	color:#444; 
+}
+
+div.console div.jquery-console-focus span.jquery-console-cursor { 
+	background:#333; 
+	color:#eee; 
+	font-weight:bold;  
+}
+
+div.console div.jquery-console-message-error { 
+	color:#ef0505; 
+	font-family:sans-serif; 
+	font-weight:bold;
+	padding:0.1em; 
+}
+
+div.console div.jquery-console-message-success { 
+	font-family:h; 
+	color:#187718; 
+	padding:0.1em; 
+}
+
+div.console span.jquery-console-prompt-label { 
+	font-weight:bold 
+}
+
+div.console div.jquery-console-welcome { 
+	font-family: fn; 
+	margin-top: 5px; 
+	margin-bottom: 10px; 
+	color: gray; 
+	font-weight:bold; 
+	font-size: 120%; 
+}
 
