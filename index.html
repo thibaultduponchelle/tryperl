@@ -1,141 +1,142 @@
 <html>
 <head>
-<title>Try Perl: learn the basics of the Perl language in your browser</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-    <meta name="Content-Type" content="text/html; charset=UTF-8">
+	<title>Try Perl: learn the basics of the Perl language in your browser</title>
+	<meta name="Content-Type" content="text/html; charset=UTF-8">
 
-    <link rel="shortcut icon" href="pixs/faviconion.ico" type="image/x-icon">
-    <link rel="icon" href="pixs/faviconion.ico" type="image/x-icon">
-    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
-
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery.console.js"></script>
-
-    
-    <script type="text/javascript">
-
-    // Make the code examples in the guide clickable so that they're
-    // inserted into the console.
-    function MakeCodeTagClickable(controller) {
-        $('#left-block-content code, #right-footer code').each(function(){
-            $(this).css('cursor','pointer');
-            $(this).attr('title','Click me to insert "' +
-                     $(this).text() + '" into the console.');
-            $(this).click(function(){
-                controller.promptText($(this).text());
-                controller.inner.click();
-            });
-        });
-	
-    }
-      function GetURLParameter(sParam)
-      {
-         var sPageURL = window.location.search.substring(1);
-         var sURLVariables = sPageURL.split('&');
-         for (var i = 0; i < sURLVariables.length; i++) 
-         {
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam) 
-            {
-               return sParameterName[1];
-            }
-         }
-      } 
-	
-      var maxlesson = 45;
-      $(document).ready(function(){
-
-	 /* Get the ?lesson=X value from url (if any) */
-         var lesson = GetURLParameter("lesson");
-	 var numlesson = 0;
-	 /* First lesson if no parameter */
-	 if(typeof lesson != 'undefined') { 
-	 	/* We go directly to an advanced lesson */
-		numlesson = parseInt(lesson);
-	 }
-	 
- 	 /*window.alert("Lesson : " +  lesson + " numlesson : " + numlesson);*/
-
-         var result = ''; 
-
-         /* Console */
-         var console = $('<div class="console">');
-         $('#right-block').append(console);
-         var controller = console.console({
-           promptLabel: 'Perl $ ',
-           commandValidate:function(line){
-             if (line == "") return false;
-             else return true;
-           },
-           commandHandle:function(line){
-
-	       if(line == "restart") {
-	           numlesson = 0; /* Or 1 instead ? */
-	           window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/index.html?lesson=" + numlesson);
-	           $( "#left-block-content").load("/lessons.html #lesson" + numlesson, function() { MakeCodeTagClickable(controller); }).hide().fadeIn('slow');
-		   return "";
-	       }
-	       
-	       if(line == "next") {
-	           if(numlesson >= maxlesson) return "";
-	           numlesson += 1;
-	           window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/index.html?lesson=" + numlesson);
-	           $( "#left-block-content").load("/lessons.html #lesson" + numlesson, function() { MakeCodeTagClickable(controller); }).hide().fadeIn('slow');
-		   return "";
-	       }
-	       
-	       if(line == "back") {
-	           if(numlesson <= 0) return "";
-		   numlesson -= 1;
-	           window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/index.html?lesson=" + numlesson);
-	           $( "#left-block-content").load("/lessons.html #lesson" + numlesson, function() { MakeCodeTagClickable(controller); }).hide().fadeIn('slow');
-		   return "";
-	       }
-		
-	       if(line == "clear") {
-	           controller.clearScreen(); 
-		   return "";
-	       }
-		
-               $.ajax({
-                      method: "GET",
-                      url: "cgi-bin/executor.cgi",
-                      async: false,
-                      data: { cmd: line, lesson: numlesson }
-               }).done(function(data) { result = data; });
-	       
-
-	       /* Check if we need to go to next lesson */
-	       arrayOfLines = result.match(/[^\r\n]+/g);
-	       if(arrayOfLines.length > 1) {
-	         if(arrayOfLines[arrayOfLines.length - 1] == "SUCCESS !") {
-		   if(numlesson < maxlesson) {
-	             numlesson += 1;
-	             window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/index.html?lesson=" + numlesson);
-	             $( "#left-block-content").load("/lessons.html #lesson" + numlesson, function() { MakeCodeTagClickable(controller); }).hide().fadeIn('slow');
-		   }
-	         }
-	       }
-	       return result.toString();
-           },
-           animateScroll:true,
-           autofocus:true,
-           promptHistory:true,
-           welcomeMessage:'[Interactive Perl interpreter ready]'
-         });
-         controller.promptText('');
-		 
-		$( "#left-block-content" ).load("/lessons.html #lesson" + numlesson,function() {
-			// Load was performed
-			MakeCodeTagClickable(controller);
-		}); 
-		$( "#left-block-content" ).fadeTo( 5000 ,1, function() {
-			// Animation complete.
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="pixs/faviconion.ico" type="image/x-icon">
+	<link rel="icon" href="pixs/faviconion.ico" type="image/x-icon">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.console.js"></script>
+	<script type="text/javascript">
+/* Make the code tags clickable for lazy people xD */
+function MakeCodeTagClickable(controller) {
+	$('#left-block-content code, #right-footer code').each(function(){
+		$(this).css('cursor','pointer');
+		$(this).attr('title','Click me to insert "' +
+		$(this).text() + '" into the console.');
+		$(this).click(function() {
+			controller.promptText($(this).text());
+			controller.inner.click();
 		});
+	});
+}
 
-	// Other inits
-       });
-    </script>
+/* Get URL parameter */
+function GetURLParameter(sParam) {
+	var sPageURL = window.location.search.substring(1);
+	var sURLVariables = sPageURL.split('&');
+	for (var i = 0; i < sURLVariables.length; i++) {
+		var sParameterName = sURLVariables[i].split('=');
+		if (sParameterName[0] == sParam) {
+			return sParameterName[1];
+		}
+	}
+} 
+
+/* Max value of lesson so we won't try to load lessons after this max */
+var maxlesson = 45;
+
+$(document).ready(function(){
+	var numlesson = 0; /* Default is 0, we try to overwrite right after... */
+	/* Get the ?lesson=X value from url (if any) */
+	var lesson = GetURLParameter("lesson");
+	/* First lesson if no parameter */
+	if(typeof lesson != 'undefined') { 
+		/* We go directly to an advanced lesson */
+		numlesson = parseInt(lesson);
+	}
+
+	var result = ''; 
+
+	/* Console */
+	var console = $('<div class="console">');
+	$('#right-block').append(console);
+	var controller = console.console({
+		promptLabel: 'Perl $ ',
+		commandValidate:function(line){
+			if (line == "") return false;
+			return true;
+		},
+
+		commandHandle:function(line) {
+
+			/* Special commands processed here : restart, next, back, clear */
+			/* Restart to first lesson */		
+			if(line == "restart") {
+				numlesson = 0; /* Or 1 instead ? */
+				window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/index.html?lesson=" + numlesson);
+				$( "#left-block-content").load("/lessons.html #lesson" + numlesson, function() { MakeCodeTagClickable(controller); }).hide().fadeIn('slow');
+				return "";
+			}
+
+			/* Go to next lesson */
+			if(line == "next") {
+				if(numlesson >= maxlesson) return "";
+				numlesson += 1;
+				window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/index.html?lesson=" + numlesson);
+				$( "#left-block-content").load("/lessons.html #lesson" + numlesson, function() { MakeCodeTagClickable(controller); }).hide().fadeIn('slow');
+				return "";
+			}
+
+			/* Back to previous lesson */
+			if(line == "back") {
+				if(numlesson <= 0) return "";
+				numlesson -= 1;
+				window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/index.html?lesson=" + numlesson);
+				$( "#left-block-content").load("/lessons.html #lesson" + numlesson, function() { MakeCodeTagClickable(controller); }).hide().fadeIn('slow');
+				return "";
+			}
+
+			/* Clear console */
+			if(line == "clear") {
+				controller.clearScreen(); 
+				return "";
+			}
+
+			/* Sync call to cgi script */
+			$.ajax({
+				method: "GET",
+				url: "cgi-bin/executor.cgi",
+				async: false,
+				data: { cmd: line, lesson: numlesson }
+			}).done(function(data) { result = data; });
+
+
+			/* Check if user typed the what we want, so he could go to the next lesson */
+			lines = result.match(/[^\r\n]+/g);
+			if(lines.length > 1) {
+				if(lines[lines.length - 1] == "SUCCESS !") {
+					if(numlesson < maxlesson) {
+						numlesson += 1;
+						window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/index.html?lesson=" + numlesson);
+						$( "#left-block-content").load("/lessons.html #lesson" + numlesson, function() { MakeCodeTagClickable(controller); }).hide().fadeIn('slow');
+					}
+				}
+			}
+			return result.toString();
+		},
+		animateScroll:true, 
+		autofocus:true,
+		promptHistory:true,
+		welcomeMessage:'[Interactive Perl interpreter ready]'
+	});
+
+	/* This part is executed only for the first load (NOT when you go to another lessons) */
+	controller.promptText('');
+
+	/* Async call to load the lesson given as parameter */
+	$( "#left-block-content" ).load("/lessons.html #lesson" + numlesson, function() {
+		MakeCodeTagClickable(controller);
+	}); 
+	
+	/* Make it appear slowly */  
+	$( "#left-block-content" ).fadeTo( 5000 ,1, function() {
+		// Animation complete.
+	});
+
+});
+</script>
 </head>
 <body>
 <!-- 
@@ -161,7 +162,6 @@ Author : Thibault Duponchelle
 
 <div id="left-footer"><a href="https://github.com/thibaultduponchelle/tryperl">Thibault Duponchelle</a> - <a href="https://github.com/chrisdone/jquery-console">console</a> - <a href="http://www.tryruby.org">tryruby</a></div>
 <div id="right-footer"><code>clear</code> clear editor - <code>back</code> previous lesson - <code>next</code> next lesson</div>
-
 
 </body>
 </html>
