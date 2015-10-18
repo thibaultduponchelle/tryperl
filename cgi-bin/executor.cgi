@@ -30,66 +30,65 @@ print "[$cmd]\n\r";
 # E.G. I ask to do a $var = "onion" in lessonN and use $var in lessonN+1
 sub init($) {
 	my $l = shift;
-	#print "lesson : $lesson";
 	if($l == 1) {
 		# Nothing to init
 	} elsif($l == 7) {
-		$Jail::u = undef; # First declaration
+		$jail::u = undef; # First declaration
 	} elsif($l == 8) {
-		$Jail::i = 42;    # First declaration of a number
+		$jail::i = 42;    # First declaration of a number
 	} elsif($l == 10) {
-		$Jail::str = " 13 "; # String easy to convert to number 
+		$jail::str = " 13 "; # String easy to convert to number 
 	} elsif($l == 12) {
-		$Jail::tor = "onion\n"; # With a trailing carriage return
+		$jail::tor = "onion\n"; # With a trailing carriage return
 	} elsif($l == 13) {
-		$Jail::tor = "onion"; # Space chomped
+		$jail::tor = "onion"; # Space chomped
 	} elsif($l == 15) {
-		@Jail::arr = ("onion", "c", "b", "a"); # Count array items
+		@jail::arr = ("onion", "c", "b", "a"); # Count array items
 	} elsif($l == 16) { 
-		@Jail::arr = ("onion", "c", "b", "a"); # Shift 
+		@jail::arr = ("onion", "c", "b", "a"); # Shift 
 	} elsif($l == 17) {
-		@Jail::arr = ("c", "b", "a"); # Shifted, pop "a"
+		@jail::arr = ("c", "b", "a"); # Shifted, pop "a"
 	} elsif($l == 18) {
-		@Jail::arr = ("c", "b"); # Popped, will push "a" 
+		@jail::arr = ("c", "b"); # Popped, will push "a" 
 	} elsif($l == 19) {
-		@Jail::arr = ("c", "b", "a"); # Push an array into the array
+		@jail::arr = ("c", "b", "a"); # Push an array into the array
 	} elsif($l == 20) {
-		@Jail::arr = ("c", "b", "a", "x", "y", "z"); # Extended, play with foreach/reverse/sort
+		@jail::arr = ("c", "b", "a", "x", "y", "z"); # Extended, play with foreach/reverse/sort
 	} elsif($l == 21) {
-		@Jail::arr = ("c", "b", "a", "x", "y", "z"); # Range then splice
+		@jail::arr = ("c", "b", "a", "x", "y", "z"); # Range then splice
 	} elsif($l == 22) {
-		@Jail::arr = ("c", "b", "a"); # Get item, multiple get
+		@jail::arr = ("c", "b", "a"); # Get item, multiple get
 	} elsif($l == 23) {
-		$Jail::a = "c"; # We play with individuals now
-		$Jail::b = "b"; # Exchange values actually
-		$Jail::c = "a"; #
+		$jail::a = "c"; # We play with individuals now
+		$jail::b = "b"; # Exchange values actually
+		$jail::c = "a"; #
 	} elsif($l == 24) {
-		$Jail::a = "a"; # Print our values
-		$Jail::b = "b"; #
-		$Jail::c = "c"; #
+		$jail::a = "a"; # Print our values
+		$jail::b = "b"; #
+		$jail::c = "c"; #
 	} elsif($l == 25) {
-		@Jail::arr = ("c", "b", "a"); # Back to our dirty array, print sort
+		@jail::arr = ("c", "b", "a"); # Back to our dirty array, print sort
 	} elsif($l == 26) {
-		@Jail::arr = ("c", "b", "a"); # Get last item
+		@jail::arr = ("c", "b", "a"); # Get last item
 	} elsif($l == 27) {
-		@Jail::arr = ("c", "b", "a"); # Join
+		@jail::arr = ("c", "b", "a"); # Join
 	} elsif($l == 28) {
-		@Jail::arr = ("c", "b", "a"); # Split
+		@jail::arr = ("c", "b", "a"); # Split
 	} elsif($l == 29) {
-		$Jail::f = "john"; # Print split result
-		$Jail::l = "doe";  #
-		$Jail::a = "30";   #
+		$jail::f = "john"; # Print split result
+		$jail::l = "doe";  #
+		$jail::a = "30";   #
 	# Constructions if,unless,logic,etc...
 	} elsif($l == 36) {
-		$Jail::h{'key1'} = "val1"; # Print values
-		$Jail::h{'key2'} = "val2"; # Using keys
+		$jail::h{'key1'} = "val1"; # Print values
+		$jail::h{'key2'} = "val2"; # Using keys
 	} elsif($l == 37) {
-		$Jail::h{'key1'} = "val1"; # Print values 
-		$Jail::h{'key2'} = "val2"; # Unsing values and join
+		$jail::h{'key1'} = "val1"; # Print values 
+		$jail::h{'key2'} = "val2"; # Unsing values and join
 	} elsif($l == 40) {
-		@Jail::arr = ("c", "b", "a"); # Deref an array
-		$Jail::h{'key1'} = "val1";    # Deref an hash
-		$Jail::h{'key2'} = "val2";    # 
+		@jail::arr = ("c", "b", "a"); # Deref an array
+		$jail::h{'key1'} = "val1";    # Deref an hash
+		$jail::h{'key2'} = "val2";    # 
 	}
 }
 
@@ -218,11 +217,11 @@ sub success($$) {
 			print "Try again...\n\r\n\r";
 		}
 	} elsif($l == 11) {
-		if($c =~ m/^\s*\$tor\s*=\s*"onion\\n"\s*$/) { # $tor = "onion "
+		if($c =~ m/^\s*\$tor\s*=\s*"onion\\n"\s*$/) { # $tor = "onion\n"
 			print "SUCCESS !\n\r\n\r";
 		} elsif($c =~ m/^\s*\$tor\s*=/) { # $tor = 
 			print "Take care to correctly fill the \$tor variable with \"onion\\n\"\n\r\n\r";
-		} elsif($c =~ m/\s*=\s*"onion\\n"\s*$/) { # = "onion "
+		} elsif($c =~ m/\s*=\s*"onion\\n"\s*$/) { # = "onion\n"
 			print "Put \"onion\\n\" inside a variable named \$tor variable\n\r\n\r";
 		} else {
 			print "Try again...\n\r\n\r";
@@ -599,11 +598,10 @@ my $output;
 open(my $outputFH, '>', \$output) or die; # This shouldn't fail
 my $oldFH = select $outputFH;
 
-my $compartment = new Safe("Jail");
+my $compartment = new Safe("jail");
 $compartment->deny(qw(:base_io :ownprocess :subprocess :filesys_read :sys_db :filesys_open :filesys_write :dangerous));
 $compartment->permit(qw(:base_math print say pack unpack require caller sort));
 
-#$Jail::var = "toto    ";
 init($lesson);
 
 my $ret;
