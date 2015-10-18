@@ -183,7 +183,7 @@ Or you could use sprintf !<br/>
 
 Everyday, every hours, every minutes... I'm <strong>chomping</strong> !<br/><br/>
 
-This command provides you an EASY and SAFE way to remove extra trailing characters (spaces, carriage returns...). It means that you can use with eyes closed ! 
+This command provides you an EASY and SAFE way to remove extra trailing characters (generally carriage returns...). It means that you can use with eyes closed ! 
 
 You must especially use it on data coming from : 
 <ul>
@@ -193,7 +193,7 @@ You must especially use it on data coming from :
 </ul>
 
 <h2>Practical work</h2>
-It's time to play with chomp, but before that, we need a variable... Please start with a variable declaration with one extra space at the end like this <code>$tor = "onion "</code>.
+It's time to play with chomp, but before that, we need a variable... Please start with a variable declaration with one extra space at the end like this <code>$tor = "onion\n"</code>.
 </div>
 
 <div id="lesson12">
@@ -206,8 +206,8 @@ To do so, use <code>print "[$tor]"</code> or <code>"[$tor]"</code>
 
 <h2>Finally chomp ! </h2>
 
-Ok our variable is ready with an extra space at the end...<br/><br/>
-Now we need to remove a trailing character, let's execute <code>chomp $tor</code>.
+Ok our variable is ready with an extra carriage return at the end...<br/><br/>
+Now we need to remove this trailing character, let's execute <code>chomp $tor</code>.
 </div>
 
 <div id="lesson13">
@@ -216,7 +216,7 @@ Now we need to remove a trailing character, let's execute <code>chomp $tor</code
 <h2>Conclusion about chomp</h2>
 
 We will close these samples around chomp by checking the final content of our <strong>$tor</strong> variable.<br/><br/>
-Please check that tariling space was removed with <code>print "($tor)"</code>.
+Please check that tariling carriage return was removed with <code>print "($tor)"</code>.
 
 <h2>Chop</h2>
 There's a <i>bazooka</i> version of <strong>chomp</strong> that is called <strong>chop</strong>.<br/><br/>
@@ -734,6 +734,7 @@ What could I recommend as further readings ?
 <li><u>Programming Perl</u> also called <i>The Camel Book</i></li>
 <li><u>Modern Perl Programming</u></li>
 </ul>
+
 
 <h2>Get your medal</h2>
 

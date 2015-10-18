@@ -40,7 +40,7 @@ sub init($) {
 	} elsif($l == 10) {
 		$Jail::str = " 13 "; # String easy to convert to number 
 	} elsif($l == 12) {
-		$Jail::tor = "onion "; # With a trailing space
+		$Jail::tor = "onion\n"; # With a trailing carriage return
 	} elsif($l == 13) {
 		$Jail::tor = "onion"; # Space chomped
 	} elsif($l == 15) {
@@ -218,20 +218,20 @@ sub success($$) {
 			print "Try again...\n\r\n\r";
 		}
 	} elsif($l == 11) {
-		if($c =~ m/^\s*\$tor\s*=\s*"onion "\s*$/) { # $tor = "onion "
+		if($c =~ m/^\s*\$tor\s*=\s*"onion\\n"\s*$/) { # $tor = "onion "
 			print "SUCCESS !\n\r\n\r";
 		} elsif($c =~ m/^\s*\$tor\s*=/) { # $tor = 
-			print "Take care to correctly fill the \$tor variable with \"onion \"\n\r\n\r";
-		} elsif($c =~ m/\s*=\s*"onion "\s*$/) { # = "onion "
-			print "Put \"onion \" inside a variable named \$tor variable\n\r\n\r";
+			print "Take care to correctly fill the \$tor variable with \"onion\\n\"\n\r\n\r";
+		} elsif($c =~ m/\s*=\s*"onion\\n"\s*$/) { # = "onion "
+			print "Put \"onion\\n\" inside a variable named \$tor variable\n\r\n\r";
 		} else {
 			print "Try again...\n\r\n\r";
 		}
 	} elsif($l == 12) {
 		if($c =~ m/^\s*print\s*"\[\$tor\]"\s*$/) { # print "[$tor]"
-			print "Good ! Do you noticed the space at the end ?!\n\r\n\r";
+			print "Good ! Do you noticed the carriage return at the end ?!\n\r\n\r";
 		} elsif($c =~ m/^\s*"\[\$tor\]"\s*$/) { # "[$tor]"
-			print "Fine ! Do you noticed the space at the end ?!\n\r\n\r";
+			print "Fine ! Do you noticed the carriage return at the end ?!\n\r\n\r";
 		} elsif($c =~ m/^\s*chomp\s*\$tor\s*$/) { # chomp $tor
 			print "SUCCESS !\n\r\n\r";
 		} else {
@@ -239,7 +239,7 @@ sub success($$) {
 		}
 	} elsif($l == 13) {
 		if($c =~ m/^\s*print\s*"\(\$tor\)"\s*$/) { # print "($tor)"
-			print "Yeah ! The variable no longer contains the trailing space !\n\r\n\r";
+			print "Yeah ! The variable no longer contains the trailing carriage return !\n\r\n\r";
 		} elsif($c =~ m/^\s*chop\s+\$tor\s*$/) { # chop $tor
 			print "SUCCESS !\n\r\n\r";
 		} else {
