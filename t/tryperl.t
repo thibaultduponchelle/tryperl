@@ -29,17 +29,20 @@ shutup();
 
 sub claim($) {
 	my $text = shift;
-	if($arg ne "-v") { return }; 
+	if(($arg ne "-v") and ($arg ne "-b")) { return }; 
 	select STDOUT;
 	print "$text";
 	shutup();
 }
 
+use Test;
+BEGIN { plan tests => 4 };
+
 my $fails = 0;
 
 claim "# Check syntax of our babies\n";
-my @files = <$CGIBIN/*.pl>; 
-push @files, <$CGIBIN/*.pm>;
+my @files = <$CGIBIN/*.pl>;  # Only one file currently
+push @files, <$CGIBIN/*.pm>; # Useless currently
 
 for my $f (@files) { 
 	system("perl -c $f 2>/dev/null");	
@@ -49,11 +52,9 @@ for my $f (@files) {
 	} else { 
 		claim "$f : OK\n";
 	}
-	ok($real_ret_value == 0) or $fails += 1;
+	($real_ret_value == 0) or $fails += 1;
 }
 
-use Test;
-BEGIN { plan tests => 1 };
 
 my $contenttype = "Content-Type: text/plain\n\r\n\r";
 my $arrow = "=> ";
