@@ -7,6 +7,8 @@
 
 use strict; # Not heavily tested with this
 use warnings; 
+no warnings 'once';
+
 use CGI;
 use Safe;
 
@@ -21,7 +23,8 @@ my $verbose = $params{'verbose'};
 $verbose and 
 print "[$cmd]\n\r";
 
-(!$cmd) and print "Nothing to execute\n";
+(!$cmd) and print "Nothing to execute\n\r" and exit;
+(!defined $lesson) and print "No lesson\n\r" and exit;
 
 # Our CGI/Perl interpreter does not keep context between calls
 # Something I learnt from demos and assembly coding is that 
@@ -101,7 +104,7 @@ sub success($$) {
 	if($l == 0) {
 		if($c =~ m/^\s*\d+\s*\+\s*\d+\s*$/) { # 3 + 6
 			print "Well done !\n\r\n\r";
-		} elsif($c =~ m/^\s*"code tag"\s*$/) { # "code tag 
+		} elsif($c =~ m/^\s*"click me"\s*$/) { # "click me"
 			print "LAZY ! LAZY ! LAZY ! xD\n\r\n\r";
 		} else {
 			print "Try again...\n\r\n\r";
