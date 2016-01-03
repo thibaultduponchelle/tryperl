@@ -22,7 +22,7 @@ The window on your right is an interactive Perl interpreter. <br/>
 You can type Perl statements and watch it run. <br/><br/>
 For your first try, type something like: <code>3 + 5</code><br/><br/>
 
-<u>LAZY PEOPLE</u> : The code tags like <code>"click me"</code> are clikable, so you haven't to type every code snippets, risking a freaky typo... Just click on code tags to test it in the interpreter !
+<u>LAZY PEOPLE</u> : The code tags like <code>"click me"</code> are clickable, so you haven't to type every code snippets, risking a freaky typo... Just click on code tags to test it in the interpreter !
 
 <h2>Rules</h2>
 
@@ -41,7 +41,7 @@ Honestly I envy you, discovering Perl was a big revelation in my IT engineer lif
 Perl is built upon some important <strong>principles</strong>, here are some :
 <ul>
 	<li>There's more than one way to do it. Best way is yours</li>
-	<li>When we program, we generally play with strings and... Perl is primarly designed to play with strings. That's so coool!</li>
+	<li>When we program, we generally play with strings and... Perl is primarily designed to play with strings. That's so coool!</li>
 	<li>As far as possible, stay close to natural language (see Perl poetry)</li>
 	<li>Perl is a glue language, allowing to launch shell commands is as easy than accessing SYSV IPC or low level sockets functions.</li>
 </ul>
@@ -49,15 +49,15 @@ Perl is built upon some important <strong>principles</strong>, here are some :
 <h2>Start to manipulate things (onions ?! or chunky bacon :P)</h2>
 
 Ok start right now without too much blah blah !<br/>
-Your first exercice is simply to type <code>reverse "onion"</code> to reverse the string "onion". Remember that with Perl <i>easy things are easy to do</i>.
+Your first exercise is simply to type <code>reverse "onion"</code> to reverse the string "onion". Remember that with Perl <i>easy things are easy to do</i>.
 </div>
 
 <div id="lesson2">
 <h1>Uppercase</h1>
 
 <h2>Simple things stay easy with Perl</h2>
-Perl won't force you to manipulate ASCII values. Perl is convenient because it already provides builtins to handle it for you.<br/><br/>
-And it's easy, and builtins do what they sound like to do.<br/><br/>
+Perl won't force you to manipulate ASCII values. Perl is convenient because it already provides built-ins to handle it for you.<br/><br/>
+And it's easy, and built-ins do what they sound like to do.<br/><br/>
 
 Please make me happy by typing <code>uc "onion"</code> or <code>lc "OnIoN"</code>...<br/><br/>
 
@@ -70,7 +70,7 @@ Please make me happy by typing <code>uc "onion"</code> or <code>lc "OnIoN"</code
 
 You could retrieve the length of a string like this <code>length "banana"</code> (yes we now replaced onion per banana after eating onion for several lessons).<br/><br/>
 
-As always, we could apply length operator on number because perl will implicitely convert number to a string : <code>length 123</code><br/><br/>
+As always, we could apply length operator on number because perl will implicitly convert number to a string : <code>length 123</code><br/><br/>
 
 For completeness, please try something else before to continue <code>length 123.00</code><br/>
 (length requests a string so 123.00 is converted to 123 !)
@@ -82,8 +82,8 @@ For completeness, please try something else before to continue <code>length 123.
 
 Remember <i>easy things stay easy to do</i>.<br/><br/>
 
-Obviously basic maths functions are availble in Perl.<br/>
-So you will find builtins like <strong>sin</strong>, <strong>cos</strong>, etc... (<i>etc is not one of these !</i> :P)<br/><br/>
+Obviously basic maths functions are available in Perl.<br/>
+So you will find built-ins like <strong>sin</strong>, <strong>cos</strong>, etc... (<i>etc is not one of these !</i> :P)<br/><br/>
 
 Please type <code>cos 2</code><br/><br/>
 
@@ -113,8 +113,8 @@ Type <code>"/\\_" x 20</code><br/>
 
 One thing that you have to know about Perl is that variables are prefixed by special a character.<br/>
 You should see it as a good thing, because it allows variable interpolation into strings and helps programmer to know with what kind of data he's dealing with...<br/><br/>
-The most common/simple variable is the <strong>scalar</strong> value and it's prefixed by a <strong>strikedtrhough S</strong>.<br/><br/>
-Perl users call it <strong>sigil</strong> but normal people call it <strong>dollar</strong> (who say truth?).<br/>
+The most common/simple variable is the <strong>scalar</strong> value and it's prefixed by a <strong>stricken-trhough S</strong>.<br/><br/>
+Perl users call it <strong>sigil</strong> but normal people call it <strong>dollar</strong>.<br/>
 Here is the famous symbol : <strong>$</strong><br/><br/>
 
 As we don't even talked about what could contain a scalar variable, let's declare an undefined variable !<br/><br/>
@@ -129,7 +129,7 @@ Declare your first variable like this : <code>$u = undef</code>
 
 A scalar variable could contain a number whatever the precision it is.<br/>
 Note that I'm talking about <strong>number</strong> and not <i>integer</i> or <i>floating</i> or <i>whatever</i>.<br/><br/>
-Until you explicitely need precision (and in this case you need to explicitely set the precision or probably use a Math library...), Perl will simplify your task by taking care of these little things for you.
+Until you explicitly need precision (and in this case you need to explicitly set the precision or probably use a Math library...), Perl will simplify your task by taking care of these little things for you.
 
 <h2>Declare a number</h2>
 Declare a number like this : <code>$i = 42</code>
@@ -172,7 +172,7 @@ Check the content of <strong>$str</strong> like this : <code>$str</code><br/><br
 
 Now use explicit conversion like this <code>$str + 0.1</code> or <code>" 40 " + 2.0</code><br/>
 Note that it will work with a <strong>print</strong> like <code>print " 38" + 4</code><br/>
-In this case you explicitely reconvert to string after addition.<br/><br/>
+In this case you explicitly reconvert to string after addition.<br/><br/>
 
 Note that it is the operator that force conversion, so <code>"41" + "1"</code> will produce a number with the result that we expect !
 
@@ -222,7 +222,7 @@ Now we need to remove this trailing character, let's execute <code>chomp $tor</c
 <h2>Conclusion about chomp</h2>
 
 We will close these samples around chomp by checking the final content of our <strong>$tor</strong> variable.<br/><br/>
-Please check that tariling carriage return was removed with <code>print "($tor)"</code>.
+Please check that trailing carriage return was removed with <code>print "($tor)"</code>.
 
 <h2>Chop</h2>
 There's a <i>bazooka</i> version of <strong>chomp</strong> that is called <strong>chop</strong>.<br/><br/>
@@ -304,7 +304,7 @@ Now that we removed an item (check with <code>print @arr</code> if you want), we
 Before to do that, I would remind you that : 
 <ul>
 <li><strong>push</strong> put data <i>at the end</i> of the array !</li>
-<li>Array garanties that insertion order is kept.</li>
+<li>Array guarantees that insertion order is kept.</li>
 </ul>
 <br/>
 Now you can type <code>push @arr, "a"</code>
@@ -313,11 +313,11 @@ Now you can type <code>push @arr, "a"</code>
 <div id="lesson19">
 <h1>Push Push !</h1>
 <h2>Push several</h2>
-If you want, quicly check array content with <code>print @arr</code> to see that it well contains "c" "b" "a" !<br/><br/>
+If you want, quickly check array content with <code>print @arr</code> to see that it well contains "c" "b" "a" !<br/><br/>
 There's even more to say about push...<br/><br/>
 You're not limited to <strong>scalar</strong> values, you can push an array into another array !<br/><br/>
 
-As a first excercice, please type <code>push @arr, ()</code><br/>
+As a first exercise, please type <code>push @arr, ()</code><br/>
 ... But this is not really useful as it just adds nothing to our array :D<br/><br/>
 
 The good example is this one <code>push @arr, ( "x", "y", "z" )</code><br/><br/>
@@ -447,16 +447,16 @@ But now I want to print array items separated by commas. But I don't want to han
 
 Simply type <code>join(",",@arr)</code> or <code>join ",",@arr</code><br/><br/>
 As I'm a joker, I propose that you could do something even weird like <code>join(" <--> ",@arr)</code> or <code>join " <--> ",@arr</code><br/><br/>
-Perl is also known as <strong>practical extraction and report language</strong>, formatting data is extremly easy !<br/><br/>
+Perl is also known as <strong>practical extraction and report language</strong>, formatting data is extremely easy !<br/><br/>
 
-Sky only is the limit !<br/>
+Sky is the limit!<br/>
 </div>
 
 <div id="lesson28">
 <h1>Banana split</h1>
 <h2>From raw to structured data</h2>
 
-Manipulating string with Perl is extremly easy, I repeat !<br/><br/>
+Manipulating string with Perl is extremely easy, I repeat !<br/><br/>
 
 Let's discover the split keyword : <br/><br/>
 <strong>split</strong> let you feed structured data from raw strings without too much effort !<br/>
