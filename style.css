@@ -148,12 +148,20 @@ ul {
 
 /* Console */
 div.console { 
-	font-size: 14px; 
+	font-size:14px; 
 	margin-top:0px; 
 }
 
-div.console div.jquery-console-inner { 
+div.console {
 	height:100%; 
+	background:#efefef; 
+	padding:0;
+	overflow:auto 
+}
+
+
+div.jquery-console-inner { 
+	height: 95%;
 	background:#efefef; 
 	padding:0;
 	overflow:auto 
