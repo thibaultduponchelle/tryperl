@@ -9,6 +9,8 @@ use strict; # Not heavily tested with this
 use warnings; 
 no warnings 'once';
 
+use 5.10.1; # Thank you xeeeeeeeeeeeeeeeeenu (do I missed a "e" ? xD)
+
 use CGI;
 use Safe;
 
