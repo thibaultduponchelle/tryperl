@@ -4,6 +4,8 @@
 
 This is the code that is running the [Try Perl](http://tryperl.pl) website.
 
+Now using **Mojolicious::Lite** and **Websockets** !
+
 
 ##Lessons
 
