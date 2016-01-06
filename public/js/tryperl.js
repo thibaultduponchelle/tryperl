@@ -1,7 +1,6 @@
-/* 
-* WEBSOCKETS
+/*
+* VARS
 */
-
 var executorWebSocket; /* The websocket for repl */
 var lessonWebSocket; /* The websocket to get lesson */
 var baseUrl; /* The base url */
@@ -9,6 +8,9 @@ var maxLesson; /* The max lesson */
 var numLesson; /* The num lesson */
 var interpreter; /* The interpreter js object */
 
+/* 
+* WEBSOCKETS
+*/
 /* Create the executor web socket for repl */
 function createExecutorWebSocket() {
 	executorWebSocket = new WebSocket( baseUrl + "executor/" + numLesson );
@@ -51,6 +53,9 @@ function createLessonWebSocket() {
 	};
 }
 
+/* 
+* UTILS
+*/
 /* Make the code tags clickable for lazy people xD */
 function makeCodeTagClickable() {
 	$('#left-block-content code, #right-footer code').each(function(){
@@ -69,7 +74,9 @@ function adjustHistory() {
 	window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/" + numLesson);
 }
 	
-
+/*
+* MAIN
+*/
 function initTryPerlClient(u, m, n) {
 	baseUrl = u;
 	maxLesson = m;
