@@ -4,7 +4,7 @@
 
 sub answer($) {
 	my $c = shift;
-	
+	return "";
 }
 
 1;
