@@ -2,7 +2,7 @@
 
 # Inits here 
 
-sub answer($$) {
+sub answer($) {
 	my $c = shift;
 	
 }
