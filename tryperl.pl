@@ -7,29 +7,28 @@
 use strict;
 use warnings;
 
-use lib "lessons";
-
 use Mojolicious::Lite;
+
+use lib "lessons";
 
 @ARGV = qw( daemon ) unless @ARGV;
 
 websocket '/executor/:num' => sub {
     my $self = shift;
     warn "Client connected to executor\n";
-    $self->on( finish => sub {
+    $self->on(finish => sub {
 	warn "Client disconnected from executor\n";
     } );
     $self->on(message => sub {
         my ( $self, $message ) = @_;
 	($message eq "ping") and return;
-	my $num = $self->stash('num');
 	require executor;
+	my $num = $self->stash('num');
 	eval "require lesson$num";
 	if($@) {
         	$self->send( { text => "Not a lesson" });
 	} else {
 		my $result = execute_this($message);
-		print $result;
 		my $answer = answer($message);
         	$self->send( { text => "$result"."$answer" });
 	}
@@ -46,9 +45,7 @@ websocket '/lesson' => sub {
     
     $self->on(message => sub {
         my ( $self, $message ) = @_;
-
 	($message eq "ping") and return;
-	
 	delete $INC{"lesson$message.pm"}; # Force module reload. FIXME: waste IO
 	eval "require lesson$message";
 	if($@) {
@@ -63,8 +60,8 @@ websocket '/lesson' => sub {
 
 get '/:n' => 'index';
 get '/' => sub {
-  my $self = shift;
-  $self->redirect_to('/0');
+	my $self = shift;
+	$self->redirect_to('/0');
 };
 
 app->start;
@@ -76,7 +73,6 @@ __DATA__
 @@ index.html.ep
 % my $url = $self->req->url->to_abs->scheme( $self->req->is_secure ? 'wss' : 'ws' )->path( '/' );
 % use config;
-
 
 <html>
 <head>
@@ -96,10 +92,6 @@ __DATA__
 	</script>
 </head>
 <body>
-<!-- 
-Project :  TryPerl
-Author : Thibault Duponchelle 
--->
 
 <div id="left-block">
  <img class="onion" src="pixs/onion-big.svg"/>

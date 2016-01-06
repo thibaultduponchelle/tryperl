@@ -1,3 +1,8 @@
+/* 
+* Project :  TryPerl
+* Author : Thibault Duponchelle 
+*/
+
 /*
 * VARS
 */
