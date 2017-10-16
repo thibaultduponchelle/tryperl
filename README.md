@@ -1,5 +1,6 @@
-#Try Perl
-##Intro
+# Try Perl
+## Intro
+
 *Learn the basics of the Perl language in your browser* !
 
 This is the code that is running the [Try Perl](http://tryperl.pl) website.
@@ -7,7 +8,7 @@ This is the code that is running the [Try Perl](http://tryperl.pl) website.
 Now using **Mojolicious::Lite** and **Websockets** !
 
 
-##Lessons
+## Lessons
 
 [Try Perl](http://tryperl.pl) is a complete tutorial... within your browser !
 
