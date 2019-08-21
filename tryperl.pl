@@ -108,7 +108,7 @@ __DATA__
 <div id="right-block">
 </div>
 
-<div id="left-footer"><a href="https://github.com/thibaultduponchelle/tryperl">Thibault Duponchelle</a> - <a href="https://github.com/chrisdone/jquery-console">console</a> - <a href="http://www.tryruby.org">tryruby</a></div>
+<div id="left-footer"><a href="https://github.com/thibaultduponchelle/tryperl">Source Code</a> - <a href="https://github.com/chrisdone/jquery-console">console</a> - <a href="http://www.tryruby.org">tryruby</a></div>
 <div id="right-footer"><code>clear</code> clear editor - <code>back</code> previous lesson - <code>next</code> next lesson</div>
 
 <script type="text/javascript" src="js/ga.js"></script>
