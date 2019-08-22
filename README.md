@@ -63,4 +63,3 @@ Look at the full list of lessons :
 
 Enjoy ! 
 
-Thibault
