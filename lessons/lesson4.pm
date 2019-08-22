@@ -25,8 +25,8 @@ __DATA__
 
 Remember <i>easy things stay easy to do</i>.<br/><br/>
 
-Obviously basic maths functions are availble in Perl.<br/>
-So you will find builtins like <strong>sin</strong>, <strong>cos</strong>, etc... (<i>etc is not one of these !</i> :P)<br/><br/>
+Obviously basic maths functions are available in Perl.<br/>
+So you will find built-ins like <strong>sin</strong>, <strong>cos</strong>, etc... (<i>etc is not one of these !</i> :P)<br/><br/>
 
 Please type <code>cos 2</code><br/><br/>
 
