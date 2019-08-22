@@ -21,7 +21,7 @@ __DATA__
 
 A scalar variable could contain a number whatever the precision it is.<br/>
 Note that I'm talking about <strong>number</strong> and not <i>integer</i> or <i>floating</i> or <i>whatever</i>.<br/><br/>
-Until you explicitely need precision (and in this case you need to explicitely set the precision or probably use a Math library...), Perl will simplify your task by taking care of these little things for you.
+Until you explicitly need precision (and in this case you need to explicitly set the precision or probably use a Math library...), Perl will simplify your task by taking care of these little things for you.
 
 <h2>Declare a number</h2>
 Declare a number like this : <code>$i = 42</code>
