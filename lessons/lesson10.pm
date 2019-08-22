@@ -43,7 +43,7 @@ Check the content of <strong>$str</strong> like this : <code>$str</code><br/><br
 
 Now use explicit conversion like this <code>$str + 0.1</code> or <code>" 40 " + 2.0</code><br/>
 Note that it will work with a <strong>print</strong> like <code>print " 38" + 4</code><br/>
-In this case you explicitely reconvert to string after addition.<br/><br/>
+In this case you explicitly reconvert to string after addition.<br/><br/>
 
 Note that it is the operator that force conversion, so <code>"41" + "1"</code> will produce a number with the result that we expect !
 
