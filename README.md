@@ -70,5 +70,5 @@ Enjoy !
 
 Thank you a lot to the following people :
 
-- @lcfg
+- [lcfg](https://github.com/lcfg)
 
