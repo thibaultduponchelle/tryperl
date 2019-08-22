@@ -22,7 +22,7 @@ __DATA__
 <h2>Conclusion about chomp</h2>
 
 We will close these samples around chomp by checking the final content of our <strong>$tor</strong> variable.<br/><br/>
-Please check that tariling carriage return was removed with <code>print "($tor)"</code>.
+Please check that trailing carriage return was removed with <code>print "($tor)"</code>.
 
 <h2>Chop</h2>
 There's a <i>bazooka</i> version of <strong>chomp</strong> that is called <strong>chop</strong>.<br/><br/>
