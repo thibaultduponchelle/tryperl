@@ -25,7 +25,7 @@ If you want, quickly check array content with <code>print @arr</code> to see tha
 There's even more to say about push...<br/><br/>
 You're not limited to <strong>scalar</strong> values, you can push an array into another array !<br/><br/>
 
-As a first excercice, please type <code>push @arr, ()</code><br/>
+As a first excercise, please type <code>push @arr, ()</code><br/>
 ... But this is not really useful as it just adds nothing to our array :D<br/><br/>
 
 The good example is this one <code>push @arr, ( "x", "y", "z" )</code><br/><br/>
