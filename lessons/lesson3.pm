@@ -23,7 +23,7 @@ __DATA__
 
 You could retrieve the length of a string like this <code>length "banana"</code> (yes we now replaced onion per banana after eating onion for several lessons).<br/><br/>
 
-As always, we could apply length operator on number because perl will implicitely convert number to a string : <code>length 123</code><br/><br/>
+As always, we could apply length operator on number because perl will implicitly convert number to a string : <code>length 123</code><br/><br/>
 
 For completeness, please try something else before to continue <code>length 123.00</code><br/>
 (length requests a string so 123.00 is converted to 123 !)
