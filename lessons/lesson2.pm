@@ -20,7 +20,7 @@ __DATA__
 
 <h2>Simple things stay easy with Perl</h2>
 Perl won't force you to manipulate ASCII values. Perl is convenient because it already provides built-ins to handle it for you.<br/><br/>
-And it's easy, and builtins do what they sound like to do.<br/><br/>
+And it's easy, and built-ins do what they sound like to do.<br/><br/>
 
 Please make me happy by typing <code>uc "onion"</code> or <code>lc "OnIoN"</code>...<br/><br/>
 
