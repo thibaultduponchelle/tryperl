@@ -24,7 +24,7 @@ __DATA__
 <h1>Banana split</h1>
 <h2>From raw to structured data</h2>
 
-Manipulating string with Perl is extremly easy, I repeat !<br/><br/>
+Manipulating string with Perl is extremely easy, I repeat !<br/><br/>
 
 Let's discover the split keyword : <br/><br/>
 <strong>split</strong> let you feed structured data from raw strings without too much effort !<br/>
