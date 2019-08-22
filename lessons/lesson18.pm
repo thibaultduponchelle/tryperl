@@ -25,7 +25,7 @@ Now that we removed an item (check with <code>print @arr</code> if you want), we
 Before to do that, I would remind you that : 
 <ul>
 <li><strong>push</strong> put data <i>at the end</i> of the array !</li>
-<li>Array garanties that insertion order is kept.</li>
+<li>Array garantees that insertion order is kept.</li>
 </ul>
 <br/>
 Now you can type <code>push @arr, "a"</code>
