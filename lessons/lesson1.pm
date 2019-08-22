@@ -24,7 +24,7 @@ Honestly I envy you, discovering Perl was a big revelation in my IT engineer lif
 Perl is built upon some important <strong>principles</strong>, here are some :
 <ul>
 	<li>There's more than one way to do it. Best way is yours</li>
-	<li>When we program, we generally play with strings and... Perl is primarly designed to play with strings. That's so coool!</li>
+	<li>When we program, we generally play with strings and... Perl is primarily designed to play with strings. That's so coool!</li>
 	<li>As far as possible, stay close to natural language (see Perl poetry)</li>
 	<li>Perl is a glue language, allowing to launch shell commands is as easy than accessing SYSV IPC or low level sockets functions.</li>
 </ul>
@@ -32,5 +32,5 @@ Perl is built upon some important <strong>principles</strong>, here are some :
 <h2>Start to manipulate things (onions ?! or chunky bacon :P)</h2>
 
 Ok start right now without too much blah blah !<br/>
-Your first exercice is simply to type <code>reverse "onion"</code> to reverse the string "onion". Remember that with Perl <i>easy things are easy to do</i>.
+Your first exercise is simply to type <code>reverse "onion"</code> to reverse the string "onion". Remember that with Perl <i>easy things are easy to do</i>.
 
