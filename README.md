@@ -66,3 +66,9 @@ Look at the full list of lessons :
 
 Enjoy ! 
 
+## Contributors
+
+Thank you a lot to the following people :
+
+- @lcfg
+
