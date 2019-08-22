@@ -1,4 +1,7 @@
 # Try Perl
+
+![TryPerlLogo](tryperl.png)
+
 ## Intro
 
 *Learn the basics of the Perl language in your browser* !
