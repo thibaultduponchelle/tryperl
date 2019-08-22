@@ -29,7 +29,7 @@ But now I want to print array items separated by commas. But I don't want to han
 
 Simply type <code>join(",",@arr)</code> or <code>join ",",@arr</code><br/><br/>
 As I'm a joker, I propose that you could do something even weird like <code>join(" <--> ",@arr)</code> or <code>join " <--> ",@arr</code><br/><br/>
-Perl is also known as <strong>practical extraction and report language</strong>, formatting data is extremly easy !<br/><br/>
+Perl is also known as <strong>practical extraction and report language</strong>, formatting data is extremely easy !<br/><br/>
 
-Sky only is the limit !<br/>
+Sky is the limit !<br/>
 
