@@ -1,6 +1,6 @@
 # Try Perl
 
-![TryPerlLogo](tryperl.png)
+![TryPerlLogo](logo.png)
 
 ## Intro
 
