@@ -21,7 +21,7 @@ sub answer($) {
 __DATA__
 <h1>Push Push !</h1>
 <h2>Push several</h2>
-If you want, quicly check array content with <code>print @arr</code> to see that it well contains "c" "b" "a" !<br/><br/>
+If you want, quickly check array content with <code>print @arr</code> to see that it well contains "c" "b" "a" !<br/><br/>
 There's even more to say about push...<br/><br/>
 You're not limited to <strong>scalar</strong> values, you can push an array into another array !<br/><br/>
 
