@@ -14,51 +14,6 @@ var numLesson; /* The num lesson */
 var interpreter; /* The interpreter js object */
 
 /* 
-* WEBSOCKETS
-*/
-/* Create the executor web socket for repl */
-function createExecutorWebSocket() {
-	executorWebSocket = new WebSocket( baseUrl + "executor/" + numLesson );
-	executorWebSocket.onopen = function() {
-		setInterval(function() {
-		        if (executorWebSocket.bufferedAmount == 0)
-				executorWebSocket.send("ping");
-		}, 3000 );
-	};
-	executorWebSocket.onmessage = function(e) {
-		/* Check if user typed the what we want, so he could go to the next lesson */
-		interpreter.report("" + e.data, 'jquery-console-message-success');
-		
-		lines = e.data.match(/[^\r\n]+/g);
-		if((lines.length > 1) && (lines[lines.length - 1] == "SUCCESS !")) {
-			if(numLesson < maxLesson) {
-				numLesson += 1;
-				adjustHistory();
-				createLessonWebSocket();
-			}
-		}
-	};
-}
-
-/* Create the lesson web socket for lesson retrieval */
-function createLessonWebSocket() {
-	lessonWebSocket = new WebSocket( baseUrl + "lesson" );
-	lessonWebSocket.onopen = function(e) {
-		lessonWebSocket.send(numLesson); /* On open, get lesson */
-		setInterval(function() {
-		        if (lessonWebSocket.bufferedAmount == 0)
-				lessonWebSocket.send("ping");
-		}, 3000 );
-
-	};
-	lessonWebSocket.onmessage = function(e) {
-		document.getElementById("lesson").innerHTML = e.data ;
-		$("#left-block-content").fadeTo(5000 ,1);
-		makeCodeTagClickable();
-	};
-}
-
-/* 
 * UTILS
 */
 /* Make the code tags clickable for lazy people xD */
@@ -77,6 +32,52 @@ function makeCodeTagClickable() {
 /* Change url */
 function adjustHistory() {
 	window.history.pushState("object or string", "Try Perl: learn the basics of the Perl language in your browser", "/" + numLesson);
+}
+
+/* 
+* WEBSOCKETS
+*/
+/* Create the lesson web socket for lesson retrieval */
+function createLessonWebSocket() {
+	lessonWebSocket = new WebSocket( baseUrl + "lesson" );
+	lessonWebSocket.onopen = function(e) {
+		lessonWebSocket.send(numLesson); /* On open, get lesson */
+		setInterval(function() {
+		        if (lessonWebSocket.bufferedAmount == 0)
+				lessonWebSocket.send("ping");
+		}, 3000 );
+
+	};
+	lessonWebSocket.onmessage = function(e) {
+		document.getElementById("lesson").innerHTML = e.data ;
+		$("#left-block-content").fadeTo(5000 ,1);
+		makeCodeTagClickable();
+	};
+}
+
+/* Create the executor web socket for repl */
+function createExecutorWebSocket() {
+	executorWebSocket = new WebSocket( baseUrl + "executor/" + numLesson );
+	executorWebSocket.onopen = function() {
+		setInterval(function() {
+		        if (executorWebSocket.bufferedAmount == 0) {
+				executorWebSocket.send("ping");
+			}
+		}, 3000 );
+	};
+	executorWebSocket.onmessage = function(e) {
+		/* Check if user typed the what we want, so he could go to the next lesson */
+		interpreter.report("" + e.data, 'jquery-console-message-success');
+		
+		lines = e.data.match(/[^\r\n]+/g);
+		if((lines.length > 1) && (lines[lines.length - 1] == "SUCCESS !")) {
+			if(numLesson < maxLesson) {
+				numLesson += 1;
+				adjustHistory();
+				createLessonWebSocket();
+			}
+		}
+	};
 }
 	
 /*
@@ -112,16 +113,19 @@ function initTryPerlClient(u, m, n) {
 			if(line == "back") { if(numLesson <= 0) { return ""; } else { numLesson -= 1; } }	
 			if(line == "restart" || line == "next" || line == "back") {  
 				adjustHistory();
-				createLessonWebSocket();	
+				createLessonWebSocket();
+				
 				return "";
 			}
 
 			if(line == "clear") {
-				interpreter.clearScreen(); 
+				interpreter.clearScreen();
+				
 				return ;
 			}
 
 			executorWebSocket.send(line);
+			
 			return "";
 		}
 	});
