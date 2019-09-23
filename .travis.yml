@@ -6,6 +6,6 @@ perl:
   - "5.26"
 
 script: 
-  - perl -c *.pm
-  - perl -c *.pl
-  - perl -c lessons/*.pm
+  - perl -MO=Lint *.pm
+  - perl -MO=Lint *.pl
+  - perl -MO=Lint lessons/*.pm
