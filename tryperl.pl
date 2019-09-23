@@ -11,7 +11,7 @@ use Mojolicious::Lite;
 
 use lib "lessons";
 
-@ARGV = qw( daemon ) unless @ARGV;
+@ARGV = qw( daemon ) unless scalar @ARGV;
 
 websocket '/executor/:num' => sub {
     my $self = shift;
