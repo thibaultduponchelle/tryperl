@@ -1,1 +1,1 @@
-require 'Mojolicious::Lite';
+requires 'Mojolicious::Lite';
