@@ -79,6 +79,6 @@ Thank you a lot to the following people :
 
 ## References
 
-Since I created TryPerl, a new online Perl runner site appeared :
+Since I created [Try Perl](tryperl.pl), a new online Perl runner site appeared :
 
 - [Perl Banjo](https://perlbanjo.com) really deserves a visit 
