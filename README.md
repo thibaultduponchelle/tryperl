@@ -77,3 +77,8 @@ Thank you a lot to the following people :
 
 - [lcfg](https://github.com/lcfg)
 
+## References
+
+Since I created TryPerl, a new online Perl runner site appeared :
+
+- [Perl Banjo](https://perlbanjo.com) really deserves a visit 
