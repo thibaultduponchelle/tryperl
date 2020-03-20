@@ -77,8 +77,21 @@ Thank you a lot to the following people :
 
 - [lcfg](https://github.com/lcfg)
 
-## References
+## See also
 
-Since I created [Try Perl](http://tryperl.pl), a new online Perl runner site appeared :
+Used to build this website or source of inspiration :
 
-- [Perl Banjo](https://perlbanjo.com) really deserves a visit 
+- [JQuery console](https://github.com/chrisdone/jquery-console) - The javascript code used for the interactive console
+
+- [TryRuby](https://try.ruby-lang.org) - This is not the original version but I wanted to put a link
+
+
+Since I created [Try Perl](http://tryperl.pl), a new online Perl runner site appeared [Perl Banjo](https://perlbanjo.com) really deserves a visit.
+
+
+Some other links in the field of "Perl in a browser"  : 
+
+- [WebPerl](https://webperl.zero-g.net/)
+
+- [Perlbot](https://perl.bot) 
+
