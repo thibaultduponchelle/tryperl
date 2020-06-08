@@ -6,6 +6,6 @@
 
 Some hand written papers to sort lessons per difficulties 
 
-![](tryperlnotes1.md)
+![](tryperlnotes1.jpg)
 
-![](tryperlnotes2.md)
+![](tryperlnotes2.jpg)
