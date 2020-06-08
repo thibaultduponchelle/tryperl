@@ -1,6 +1,4 @@
-# Some more personal history about TryPerl
-
-## Draft 
+# Some more personal history about TryPerl 
 
 ## Draft papers 
 
