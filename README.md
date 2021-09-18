@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/thibaultduponchelle/tryperl.svg?branch=master)](https://travis-ci.org/thibaultduponchelle/tryperl) [![Kritika Analysis Status](https://kritika.io/users/thibaultduponchelle/repos/7954242751002259/heads/master/status.svg)](https://kritika.io/users/thibaultduponchelle/repos/7954242751002259/heads/master/)
+[![Build Status](https://travis-ci.org/thibaultduponchelle/tryperl.svg?branch=master)](https://travis-ci.org/thibaultduponchelle/tryperl)
 
 # Try Perl
 
