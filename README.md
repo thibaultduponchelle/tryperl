@@ -1,3 +1,5 @@
+[![GitHub Action](https://github.com/thibaultduponchelle/tryperl/actions/workflows/lint.yml/badge.svg)](https://github.com/thibaultduponchelle/tryperl/actions/workflows/lint.yml)
+
 # Try Perl
 
 ![TryPerlLogo](logo.png)
