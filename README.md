@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/thibaultduponchelle/tryperl.svg?branch=master)](https://travis-ci.org/thibaultduponchelle/tryperl)
-
 # Try Perl
 
 ![TryPerlLogo](logo.png)
