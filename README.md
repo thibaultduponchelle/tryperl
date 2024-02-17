@@ -1,11 +1,9 @@
 [![GitHub Action](https://github.com/thibaultduponchelle/tryperl/actions/workflows/lint.yml/badge.svg)](https://github.com/thibaultduponchelle/tryperl/actions/workflows/lint.yml)
 
 # Try Perl
-
 ![TryPerlLogo](logo.png)
 
 ## Intro
-
 *Learn the basics of the Perl language in your browser* !
 
 This is the code that is running the [Try Perl](http://tryperl.pl) website.
@@ -13,11 +11,9 @@ This is the code that is running the [Try Perl](http://tryperl.pl) website.
 Now using **Mojolicious::Lite** and **Websockets** !
 
 ## Preview 
-
 ![](tryperl.png)
 
 ## Lessons
-
 [Try Perl](http://tryperl.pl) is a complete tutorial... within your browser !
 
 Look at the full list of lessons :
@@ -72,13 +68,12 @@ Look at the full list of lessons :
 Enjoy ! 
 
 ## Contributors
-
 Thank you a lot to the following people :
 
 - [lcfg](https://github.com/lcfg)
+- [b4shful](https://github.com/b4shful)
 
 ## See also
-
 Used to build this website or source of inspiration :
 
 - [JQuery console](https://github.com/chrisdone/jquery-console) - The javascript code used for the interactive console
